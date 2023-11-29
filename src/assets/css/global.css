@@ -85,6 +85,13 @@ body {
   @apply flex items-center gap-3 p-2 transition delay-100 bg-white rounded-full cursor-pointer hover:bg-emerald-500 shadow-geyser-10 hover:shadow-emerald-40
 }
 
+/************* Chat Box ***********/
+
+/* This class is used in many section */
+.chatbox {
+  @apply flex w-full gap-3 p-3 mb-3 transition bg-white rounded-2xl last:mb-0 hover:shadow-emerald-40
+}
+
 /************* Sidebar ***********/
 .sidebar-item {
   @apply flex items-center justify-center w-full relative h-28 rounded-e-3xl overflow-hidden cursor-pointer transition before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-emerald-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4
