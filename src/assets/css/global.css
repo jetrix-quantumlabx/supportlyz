@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "TT Firs Neue Trial Var Roman";
+  src: url("../fonts/tt-firs-neue-trial-var-roman.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 100 400 500 900;
+}
+
+@font-face {
+  font-family: "fontello";
+  src: url("../fonts/fontello.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  @apply h-full text-base bg-geyser-200;
+  font-family: "TT Firs Neue Trial Var Roman";
+  font-size: 16px;
+}
+
+/*********** COMPONENTS ***********/
+
+/************* Icons ***********/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat:before { content: '\e800'; }
+.icon-chevron:before { content: '\e801'; }
+.icon-cog:before { content: '\e802'; }
+.icon-earphones:before { content: '\e803'; }
+.icon-ecommerce:before { content: '\e804'; }
+.icon-house:before { content: '\e805'; }
+.icon-inbox:before { content: '\e807'; }
+.icon-integration:before { content: '\e808'; }
+.icon-invoice:before { content: '\e809'; }
+.icon-link:before { content: '\e80a'; }
+.icon-magnet:before { content: '\e80b'; }
+.icon-message:before { content: '\e80c'; }
+.icon-picture:before { content: '\e80d'; }
+.icon-robot:before { content: '\e80e'; }
+.icon-search:before { content: '\e80f'; }
+.icon-user:before { content: '\e811'; }
+.icon-users:before { content: '\e812'; }
+.icon-arrow:before { content: '\e813'; }
+.icon-bell:before { content: '\e814'; }
+.icon-browser:before { content: '\e815'; }
+.icon-square:before { content: '\e816'; }
+.icon-hyperlink:before { content: '\e817'; }
+
+/************* Buttons ***********/
+.button-icon {
+  @apply flex items-center justify-center text-center transition delay-100 bg-white rounded-full cursor-pointer text-emerald-500 hover:bg-emerald-500 hover:text-white w-14 h-14 shadow-geyser-10 hover:shadow-emerald-40 text-2xl
+}
+
+/************* Search ***********/
+.search {
+  @apply relative w-2/5 bg-white rounded-full h-14 flex items-center overflow-hidden
+}
+
+.search-icon {
+  @apply w-16 relative flex items-center justify-center text-xl text-emerald-500 after:content-[''] after:absolute after:-top-0 after:right-0 after:w-px after:h-7 after:z-20 after:bg-emerald-200
+}
+
+/************* Account ***********/
+.account {
+  @apply flex items-center gap-3 p-2 transition delay-100 bg-white rounded-full cursor-pointer hover:bg-emerald-500 shadow-geyser-10 hover:shadow-emerald-40
+}
+
+/************* Sidebar ***********/
+.sidebar-item {
+  @apply flex items-center justify-center w-full relative h-28 rounded-e-3xl overflow-hidden cursor-pointer transition before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-emerald-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4
+}
+
+/* This class is used to visually highlight the sidebar item that the user has currently selected. */
+.sidebar-item-is-active {
+  @apply before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-emerald-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4 !text-white
+}
+
+/************* Statistics ***********/
+.statistics {
+  @apply bg-white bg-opacity-50 rounded-3xl h-[110px] w-4/5 cursor-pointer transition relative overflow-hidden before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:z-10 before:transition before:bg-emerald-500 before:duration-500
+}
+
+/************* Goals ***********/
+.goals {
+  @apply w-1/3 bg-white bg-opacity-50 rounded-3xl relative overflow-hidden before:h-full before:w-full before:content-[''] before:absolute before:z-10 before:transition before:bg-emerald-500 before:duration-500 before:-translate-x-full hover:before:translate-x-0
+}
+
+/************* Integrations ***********/
+.integrations {
+  @apply bg-white flex items-center justify-center bg-opacity-50 rounded-3xl h-[110px] w-1/5 transition relative overflow-hidden before:h-full before:w-full before:content-[''] before:absolute before:z-10 before:transition before:bg-emerald-500 before:duration-500 before:-translate-x-full hover:before:translate-x-0
+}
+
+
+/************* ScrollBar ***********/
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
