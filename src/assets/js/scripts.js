@@ -1,16 +1,22 @@
+// Utils
+
+// Handler
+const handlerFunction = (handler, element) => {
+  return handler.addEventListener("click", () => {
+    if (element.classList.contains("hidden")) {
+      element.classList.remove("hidden");
+      element.classList.add("block");
+    } else {
+      element.classList.remove("block");
+      element.classList.add("hidden");
+    }
+  });
+}
+
 // Notifications
 const notificationHandler = document.getElementById("notification-handler");
 const notificationCenter = document.getElementById("notification-center");
-
-notificationHandler.addEventListener("click", () => {
-  if (notificationCenter.classList.contains("hidden")) {
-    notificationCenter.classList.remove("hidden");
-    notificationCenter.classList.add("block");
-  } else {
-    notificationCenter.classList.remove("block");
-    notificationCenter.classList.add("hidden");
-  }
-});
+handlerFunction(notificationHandler, notificationCenter);
 
 // Sidebar
 const sidebarHandlers = document.getElementsByClassName("sidebar-handler");
@@ -37,4 +43,12 @@ const sidebarLabels = document.getElementsByClassName("sidebar-label");
   });
 });
 
-// Sidebar
+// Account
+const accountHandler = document.getElementById("account-handler");
+const accountDropdown = document.getElementById("account-dropdown");
+handlerFunction(accountHandler, accountDropdown);
+
+// Status Dropdown
+const statusHandler = document.getElementById("status-handler");
+const statusDropdown = document.getElementById("status-dropdown");
+handlerFunction(statusHandler, statusDropdown);

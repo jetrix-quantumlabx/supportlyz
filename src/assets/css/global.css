@@ -43,32 +43,44 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-chat:before { content: '\e800'; }
-.icon-chevron:before { content: '\e801'; }
-.icon-cog:before { content: '\e802'; }
-.icon-earphones:before { content: '\e803'; }
-.icon-ecommerce:before { content: '\e804'; }
-.icon-house:before { content: '\e805'; }
-.icon-inbox:before { content: '\e807'; }
-.icon-integration:before { content: '\e808'; }
-.icon-invoice:before { content: '\e809'; }
-.icon-link:before { content: '\e80a'; }
-.icon-magnet:before { content: '\e80b'; }
-.icon-message:before { content: '\e80c'; }
-.icon-picture:before { content: '\e80d'; }
-.icon-robot:before { content: '\e80e'; }
-.icon-search:before { content: '\e80f'; }
-.icon-user:before { content: '\e811'; }
-.icon-users:before { content: '\e812'; }
-.icon-arrow:before { content: '\e813'; }
-.icon-bell:before { content: '\e814'; }
-.icon-browser:before { content: '\e815'; }
-.icon-square:before { content: '\e816'; }
-.icon-hyperlink:before { content: '\e817'; }
+.icon-chat:before { content: '\e800'; } /* '' */
+.icon-chevron:before { content: '\e801'; } /* '' */
+.icon-cog:before { content: '\e802'; } /* '' */
+.icon-earphones:before { content: '\e803'; } /* '' */
+.icon-ecommerce:before { content: '\e804'; } /* '' */
+.icon-house:before { content: '\e805'; } /* '' */
+.icon-logout:before { content: '\e806'; } /* '' */
+.icon-inbox:before { content: '\e807'; } /* '' */
+.icon-integration:before { content: '\e808'; } /* '' */
+.icon-invoice:before { content: '\e809'; } /* '' */
+.icon-link:before { content: '\e80a'; } /* '' */
+.icon-magnet:before { content: '\e80b'; } /* '' */
+.icon-message:before { content: '\e80c'; } /* '' */
+.icon-picture:before { content: '\e80d'; } /* '' */
+.icon-robot:before { content: '\e80e'; } /* '' */
+.icon-search:before { content: '\e80f'; } /* '' */
+.icon-add:before { content: '\e810'; } /* '' */
+.icon-user:before { content: '\e811'; } /* '' */
+.icon-users:before { content: '\e812'; } /* '' */
+.icon-arrow:before { content: '\e813'; } /* '' */
+.icon-bell:before { content: '\e814'; } /* '' */
+.icon-browser:before { content: '\e815'; } /* '' */
+.icon-square:before { content: '\e816'; } /* '' */
+.icon-hyperlink:before { content: '\e817'; } /* '' */
 
 /************* Buttons ***********/
 .button-icon {
   @apply flex items-center justify-center text-center transition delay-100 bg-white rounded-full cursor-pointer text-emerald-500 hover:bg-emerald-500 hover:text-white w-14 h-14 shadow-geyser-10 hover:shadow-emerald-40 text-2xl
+}
+.button-icon-small {
+  @apply flex items-center justify-center text-center transition delay-100 bg-white rounded-full cursor-pointer text-emerald-500 hover:bg-emerald-500 hover:text-white w-10 h-10 shadow-geyser-10 hover:shadow-emerald-40 text-xl
+}
+
+.button-small {
+  @apply flex items-center justify-center w-full gap-2 py-2 text-sm text-black rounded-full cursor-pointer hover:bg-emerald-600 bg-gray-300 hover:shadow-emerald-40 hover:text-white
+}
+.button-primary-small {
+  @apply flex items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40
 }
 
 /************* Search ***********/
@@ -82,7 +94,7 @@ body {
 
 /************* Account ***********/
 .account {
-  @apply flex items-center gap-3 p-2 transition delay-100 bg-white rounded-full cursor-pointer hover:bg-emerald-500 shadow-geyser-10 hover:shadow-emerald-40
+  @apply p-2 relative transition delay-100 bg-white rounded-full cursor-pointer hover:bg-emerald-500 shadow-geyser-10 hover:shadow-emerald-40
 }
 
 /************* Chat Box ***********/
@@ -117,6 +129,11 @@ body {
   @apply bg-white flex items-center justify-center bg-opacity-50 rounded-3xl h-[110px] w-1/5 transition relative overflow-hidden before:h-full before:w-full before:content-[''] before:absolute before:z-10 before:transition before:bg-emerald-500 before:duration-500 before:-translate-x-full hover:before:translate-x-0
 }
 
+/*********** UTILITIES ***********/
+
+.line-normal {
+  line-height: normal;
+}
 
 /************* ScrollBar ***********/
 ::-webkit-scrollbar {
