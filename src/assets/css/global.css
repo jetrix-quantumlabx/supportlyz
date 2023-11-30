@@ -44,7 +44,6 @@ body {
 }
 
 .icon-chat:before { content: '\e800'; } /* '' */
-.icon-chevron:before { content: '\e801'; } /* '' */
 .icon-cog:before { content: '\e802'; } /* '' */
 .icon-earphones:before { content: '\e803'; } /* '' */
 .icon-ecommerce:before { content: '\e804'; } /* '' */
@@ -67,20 +66,46 @@ body {
 .icon-browser:before { content: '\e815'; } /* '' */
 .icon-square:before { content: '\e816'; } /* '' */
 .icon-hyperlink:before { content: '\e817'; } /* '' */
+.icon-forgot:before { content: '\e818'; } /* '' */
+.icon-envelope:before { content: '\e819'; } /* '' */
+.icon-lock:before { content: '\e81b'; } /* '' */
+.icon-shopify:before { content: '\e81c'; } /* '' */
+.icon-gmail:before { content: '\e81d'; } /* '' */
+.icon-hide:before { content: '\e81e'; } /* '' */
+.icon-chevron:before { content: '\e821'; } /* '' */
 
 /************* Buttons ***********/
+
+/* Button Icon */
 .button-icon {
   @apply flex items-center justify-center text-center transition delay-100 bg-white rounded-full cursor-pointer text-emerald-500 hover:bg-emerald-500 hover:text-white w-14 h-14 shadow-geyser-10 hover:shadow-emerald-40 text-2xl
 }
 .button-icon-small {
   @apply flex items-center justify-center text-center transition delay-100 bg-white rounded-full cursor-pointer text-emerald-500 hover:bg-emerald-500 hover:text-white w-10 h-10 shadow-geyser-10 hover:shadow-emerald-40 text-xl
 }
+/* Button */
 
-.button-small {
+.button-gray-small {
   @apply flex items-center justify-center w-full gap-2 py-2 text-sm text-black rounded-full cursor-pointer hover:bg-emerald-600 bg-gray-300 hover:shadow-emerald-40 hover:text-white
 }
-.button-primary-small {
+
+.button-emerald-small {
   @apply flex items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40
+}
+
+.button-white-small {
+  @apply flex items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40
+}
+
+.button-outline-white {
+  @apply px-6 py-3 text-base text-white border border-white rounded-full min-w-[200px] hover:bg-white hover:text-emerald-500 hover:shadow-emerald-40
+}
+.button-emerald {
+  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40
+}
+
+.button-elfgreen {
+  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-elf-green-700 hover:shadow-emerald-40
 }
 
 /************* Search ***********/
@@ -127,6 +152,11 @@ body {
 /************* Integrations ***********/
 .integrations {
   @apply bg-white flex items-center justify-center bg-opacity-50 rounded-3xl h-[110px] w-1/5 transition relative overflow-hidden before:h-full before:w-full before:content-[''] before:absolute before:z-10 before:transition before:bg-emerald-500 before:duration-500 before:-translate-x-full hover:before:translate-x-0
+}
+
+/************* OR ***********/
+.or-line {
+  @apply block my-10 h-5 relative text-sm text-gray-400 after:content-[''] after:bg-emerald-500 after:absolute after:right-0 after:w-full after:h-px after:top-1/2 before:content-[''] before:absolute before:left-2/4 before:-translate-x-1/2 before:w-8 before:h-8 before:z-10 before:rounded-full before:bg-geyser-100
 }
 
 /*********** UTILITIES ***********/
