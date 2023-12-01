@@ -140,9 +140,11 @@
                       <button class="button-icon-small">
                         <i class="icon-magnet"></i>
                       </button>
-                      <button class="button-icon-small">
-                        <i class="icon-logout"></i>
-                      </button>
+                      <a href="login.html">
+                        <button class="button-icon-small">
+                          <i class="icon-logout"></i>
+                        </button>
+                      </a>
                     </div>
                   </div>
                   <div class="relative">
@@ -571,8 +573,76 @@
           </div>
 
 
+          <!-- Chatbot -->
+          <div class="fixed bottom-0 z-40 flex right-2">
+
+            <!-- Chatbot Box -->
+            <div class="w-[490px] h-[345px rounded-3xl">
+              <div class="bg-gradient-to-b from-emerald-500 to-elf-green-500 rounded-t-3xl">
+                <div class="flex items-center justify-between p-6 ">
+                  <img src="assets/images/logo-white.svg" alt="logo" class="w-36">
+                  <div class="flex items-center gap-3 -mt-16">
+                    <button class="button-icon">
+                      <span>
+                        <i class="icon-bell"></i>
+                      </span>
+                    </button>
+                    <button class="button-icon">
+                      <span>
+                        <i class="icon-bell"></i>
+                      </span>
+                    </button>
+                    <button class="button-icon">
+                      <span>
+                        <i class="icon-bell"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="py-6">
+                  <h3 class="mb-3 text-3xl font-bold text-center text-white">Let’s chat! 🥳</h3>
+                  <p class="text-sm text-center text-white">Chat with Nike Shopify Store</p>
+                </div>
+
+                <div class="flex items-center justify-center gap-3 py-4 bg-elf-green-600 rounded-t-3xl">
+                  <div class="relative">
+                    <img src="assets/images/boy.png" alt="user">
+                    <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-emerald-500"></span>
+                  </div>
+                  <p class="text-sm text-white">Our Assistants are Online</p>
+                </div>
+              </div>
+
+              <!-- Chatbot Body -->
+              <div class="p-6 bg-gray-300 h-[200px]">
+                <div class="flex items-start gap-4">
+                  <div class="relative">
+                    <img src="assets/images/bot.png" alt="bot" class="w-12 h-12 rounded-full">
+                    <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-emerald-500"></span>
+                  </div>
+                  <div class="relative">
+                    <div class="p-3 rounded-xl bg-emerald-500 max-w-[280px] mb-2">
+                      <p class="text-sm text-white">Hello 🙋 let me know with anything that i can help you!</p>
+                    </div>
+                    <p class="text-xs text-gray-500">Supportlyz - 9:39 AM</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Chatbot Handler -->
+            <button class="chatbot-handler">
+              <span class="text-3xl text-white h-7">
+                <i class="icon-message"></i>
+              </span>
+            </button>
+
+          </button>
+
+
           <!-- Footer -->
-          <div class="absolute bottom-0 left-0 flex items-center justify-between w-full px-6 py-8">
+          <!-- <div class="fixed bottom-0 left-0 flex items-center justify-between w-full px-6 py-8">
             <p class="flex items-center gap-3 text-black">
               <img src="assets/images/logo-isotipe.svg" alt="isotipe" class="w-5 h-5">
               <b class="font-medium">Supportlyz</b> © All rights reserved
@@ -587,7 +657,7 @@
                 <i class="text-base icon-link text-emerald-500"></i>
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </main>

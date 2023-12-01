@@ -72,7 +72,9 @@ body {
 .icon-shopify:before { content: '\e81c'; } /* '' */
 .icon-gmail:before { content: '\e81d'; } /* '' */
 .icon-hide:before { content: '\e81e'; } /* '' */
+.icon-card:before { content: '\e81f'; } /* '' */
 .icon-chevron:before { content: '\e821'; } /* '' */
+.icon-signup:before { content: '\e822'; } /* '' */
 
 /************* Buttons ***********/
 
@@ -83,8 +85,12 @@ body {
 .button-icon-small {
   @apply flex items-center justify-center text-center transition delay-100 bg-white rounded-full cursor-pointer text-emerald-500 hover:bg-emerald-500 hover:text-white w-10 h-10 shadow-geyser-10 hover:shadow-emerald-40 text-xl
 }
-/* Button */
 
+.button-icon-outline {
+  @apply flex items-center justify-center text-center transition delay-100 bg-transparent rounded-full cursor-pointer border border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white w-14 h-14 shadow-geyser-10 hover:shadow-emerald-40 text-2xl
+}
+
+/* Button */
 .button-gray-small {
   @apply flex items-center justify-center w-full gap-2 py-2 text-sm text-black rounded-full cursor-pointer hover:bg-emerald-600 bg-gray-300 hover:shadow-emerald-40 hover:text-white
 }
@@ -106,6 +112,10 @@ body {
 
 .button-elfgreen {
   @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-elf-green-700 hover:shadow-emerald-40
+}
+
+.button-elfgreen-light {
+  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-elf-green-700 rounded-full cursor-pointer hover:bg-emerald-600 bg-elf-green-700 bg-opacity-50 hover:shadow-emerald-40 hover:text-white
 }
 
 /************* Search ***********/
@@ -158,6 +168,12 @@ body {
 .or-line {
   @apply block my-10 h-5 relative text-sm text-gray-400 after:content-[''] after:bg-emerald-500 after:absolute after:right-0 after:w-full after:h-px after:top-1/2 before:content-[''] before:absolute before:left-2/4 before:-translate-x-1/2 before:w-8 before:h-8 before:z-10 before:rounded-full before:bg-geyser-100
 }
+
+/************* CHATBOT ***********/
+.chatbot-handler {
+  @apply flex items-center justify-center w-20 h-20 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-emerald-600 hover:text-white shadow-emerald-40 hover:shadow-emerald-50
+}
+
 
 /*********** UTILITIES ***********/
 
