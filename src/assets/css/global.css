@@ -44,6 +44,7 @@ body {
 }
 
 .icon-chat:before { content: '\e800'; } /* '' */
+.icon-adjunct:before { content: '\e801'; } /* '' */
 .icon-cog:before { content: '\e802'; } /* '' */
 .icon-earphones:before { content: '\e803'; } /* '' */
 .icon-ecommerce:before { content: '\e804'; } /* '' */
@@ -68,13 +69,21 @@ body {
 .icon-hyperlink:before { content: '\e817'; } /* '' */
 .icon-forgot:before { content: '\e818'; } /* '' */
 .icon-envelope:before { content: '\e819'; } /* '' */
+.icon-happy:before { content: '\e81a'; } /* '' */
 .icon-lock:before { content: '\e81b'; } /* '' */
 .icon-shopify:before { content: '\e81c'; } /* '' */
 .icon-gmail:before { content: '\e81d'; } /* '' */
 .icon-hide:before { content: '\e81e'; } /* '' */
 .icon-card:before { content: '\e81f'; } /* '' */
+.icon-send:before { content: '\e820'; } /* '' */
 .icon-chevron:before { content: '\e821'; } /* '' */
 .icon-signup:before { content: '\e822'; } /* '' */
+.icon-x:before { content: '\e824'; } /* '' */
+.icon-star:before { content: '\e825'; } /* '' */
+.icon-pen:before { content: '\e826'; } /* '' */
+.icon-ball:before { content: '\e827'; } /* '' */
+.icon-clock:before { content: '\e829'; } /* '' */
+.icon-coffe:before { content: '\e82a'; } /* '' */
 
 /************* Buttons ***********/
 
@@ -171,7 +180,11 @@ body {
 
 /************* CHATBOT ***********/
 .chatbot-handler {
-  @apply flex items-center justify-center w-20 h-20 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-emerald-600 hover:text-white shadow-emerald-40 hover:shadow-emerald-50
+  @apply fixed bottom-20 right-4 flex items-center justify-center w-20 h-20 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-white hover:text-emerald-500 shadow-emerald-40 hover:shadow-emerald-50
+}
+
+.chatbot-send {
+  @apply flex items-center justify-center w-16 h-16 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-white hover:text-emerald-500 shadow-emerald-40 hover:shadow-emerald-50 absolute -right-9 -top-12
 }
 
 

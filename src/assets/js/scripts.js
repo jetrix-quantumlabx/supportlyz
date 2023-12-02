@@ -31,9 +31,16 @@ const handleClickAway = (event, handler, dropdown) => {
 
 // Handler Click
 // Sirve para mostrar y ocultar un dropdown al hacer click en un elemento
-const handlerFunction = (handler, element) => {
+const handlerToggleDisplay = (handler, element) => {
   handler?.addEventListener("click", () =>
     toggleClasses(element, "hidden", "block")
+  );
+};
+
+// Sirve para agregar y quitar una clase al hacer click en un elemento
+const handlerToggleClass = (handler, class1, class2, element) => {
+  handler?.addEventListener("click", () =>
+    toggleClasses(element, class1, class2)
   );
 };
 
@@ -50,7 +57,7 @@ const handleMouseOut = (sidebarLabel) =>
 // Notifications
 const notificationHandler = document.getElementById("notification-handler");
 const notificationCenter = document.getElementById("notification-center");
-handlerFunction(notificationHandler, notificationCenter);
+handlerToggleDisplay(notificationHandler, notificationCenter);
 
 // document.addEventListener("click", (event) =>
 //   handleClickAway(event, notificationHandler, notificationCenter)
@@ -73,7 +80,7 @@ const sidebarLabels = document.getElementsByClassName("sidebar-label");
 const accountHandler = document.getElementById("account-handler");
 const accountDropdown = document.getElementById("account-dropdown");
 
-handlerFunction(accountHandler, accountDropdown);
+handlerToggleDisplay(accountHandler, accountDropdown);
 
 // document.addEventListener("click", (event) =>
 //   handleClickAway(event, accountHandler, accountDropdown)
@@ -83,7 +90,7 @@ handlerFunction(accountHandler, accountDropdown);
 const statusHandler = document.getElementById("status-handler");
 const statusDropdown = document.getElementById("status-dropdown");
 
-handlerFunction(statusHandler, statusDropdown);
+handlerToggleDisplay(statusHandler, statusDropdown);
 // document.addEventListener("click", (event) =>
 //   handleClickAway(event, statusHandler, statusDropdown)
 // );
@@ -92,7 +99,47 @@ handlerFunction(statusHandler, statusDropdown);
 const languageHandler = document.getElementById("language-handler");
 const languageDropdown = document.getElementById("language-dropdown");
 
-handlerFunction(languageHandler, languageDropdown);
+handlerToggleDisplay(languageHandler, languageDropdown);
 // document.addEventListener("click", (event) =>
 //   handleClickAway(event, languageHandler, languageDropdown)
 // );
+
+// Chatbot
+const chatbotHandler = document.getElementById("chatbot-handler");
+const chatbotIcon = document.getElementById("chatbot-icon");
+const chatbotBox = document.getElementById("chatbot-box");
+const chatbotBoxClose = document.getElementById("chatbot-box-close");
+const chatbotEmojisBox = document.getElementById("chatbot-emojis-box");
+const chatbotEmojisHandler = document.getElementById("chatbot-emojis-handler");
+
+chatbotHandler.addEventListener("mouseover", () =>
+  toggleClasses(chatbotIcon, "icon-pen", "icon-message")
+);
+
+chatbotHandler.addEventListener("mouseout", () =>
+  toggleClasses(chatbotIcon, "icon-message", "icon-pen")
+);
+
+// Muestra el Chat
+handlerToggleClass(
+  chatbotHandler,
+  "translate-x-[530px]",
+  "translate-x-0",
+  chatbotBox
+);
+
+// Oculta el Chat
+handlerToggleClass(
+  chatbotBoxClose,
+  "translate-x-0",
+  "translate-x-[530px]",
+  chatbotBox
+);
+
+// Muestra y oculta el box de emojis
+handlerToggleClass(
+  chatbotEmojisHandler,
+  "translate-y-[430px]",
+  "translate-y-0",
+  chatbotEmojisBox
+);
