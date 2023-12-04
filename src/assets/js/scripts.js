@@ -111,6 +111,10 @@ const chatbotBox = document.getElementById("chatbot-box");
 const chatbotBoxClose = document.getElementById("chatbot-box-close");
 const chatbotEmojisBox = document.getElementById("chatbot-emojis-box");
 const chatbotEmojisHandler = document.getElementById("chatbot-emojis-handler");
+const chatbotNotificationHandler = document.getElementById("chatbot-notification-handler");
+const chatbotNotificationBox = document.getElementById("chatbot-notification-box");
+const chatbotRatingHandler = document.getElementById("chatbot-rating-handler");
+const chatbotRatingBox = document.getElementById("chatbot-rating-box");
 
 chatbotHandler.addEventListener("mouseover", () =>
   toggleClasses(chatbotIcon, "icon-pen", "icon-message")
@@ -142,4 +146,20 @@ handlerToggleClass(
   "translate-y-[430px]",
   "translate-y-0",
   chatbotEmojisBox
+);
+
+// Muestra y oculta el box de notifications
+handlerToggleClass(
+  chatbotNotificationHandler,
+  "opacity-0",
+  "opacity-100",
+  chatbotNotificationBox
+);
+
+// Muestra y oculta el box de rating
+handlerToggleClass(
+  chatbotRatingHandler,
+  "opacity-0",
+  "opacity-100",
+  chatbotRatingBox
 );
