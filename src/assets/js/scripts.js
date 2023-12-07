@@ -55,8 +55,8 @@ const handleMouseOut = (sidebarLabel) =>
   toggleClasses(sidebarLabel, "opacity-1", "opacity-0");
 
 // Notifications
-const notificationHandler = document.getElementById("notification-handler");
-const notificationCenter = document.getElementById("notification-center");
+const notificationHandler = document.querySelector(".notification-handler");
+const notificationCenter = document.querySelector(".notification-center");
 handlerToggleDisplay(notificationHandler, notificationCenter);
 
 // document.addEventListener("click", (event) =>
@@ -82,84 +82,71 @@ const accountDropdown = document.getElementById("account-dropdown");
 
 handlerToggleDisplay(accountHandler, accountDropdown);
 
-// document.addEventListener("click", (event) =>
-//   handleClickAway(event, accountHandler, accountDropdown)
-// );
 
 // Status Dropdown
 const statusHandler = document.getElementById("status-handler");
 const statusDropdown = document.getElementById("status-dropdown");
 
 handlerToggleDisplay(statusHandler, statusDropdown);
-// document.addEventListener("click", (event) =>
-//   handleClickAway(event, statusHandler, statusDropdown)
-// );
 
 // Language Dropdown
-const languageHandler = document.getElementById("language-handler");
-const languageDropdown = document.getElementById("language-dropdown");
+const languageHandler = document.querySelector(".language-handler");
+const languageDropdown = document.querySelector(".language-dropdown");
 
 handlerToggleDisplay(languageHandler, languageDropdown);
-// document.addEventListener("click", (event) =>
-//   handleClickAway(event, languageHandler, languageDropdown)
-// );
 
 // Chatbot
-const chatbotHandler = document.getElementById("chatbot-handler");
-const chatbotIcon = document.getElementById("chatbot-icon");
-const chatbotBox = document.getElementById("chatbot-box");
-const chatbotBoxClose = document.getElementById("chatbot-box-close");
-const chatbotEmojisBox = document.getElementById("chatbot-emojis-box");
-const chatbotEmojisHandler = document.getElementById("chatbot-emojis-handler");
-const chatbotNotificationHandler = document.getElementById("chatbot-notification-handler");
-const chatbotNotificationBox = document.getElementById("chatbot-notification-box");
-const chatbotRatingHandler = document.getElementById("chatbot-rating-handler");
-const chatbotRatingBox = document.getElementById("chatbot-rating-box");
+const chatbotHandler = document.querySelector(".chatbot-handler");
+const chatbotIcon = document.querySelector(".chatbot-icon");
+const chatbotBox = document.querySelector(".chatbot-box");
+const chatbotBoxClose = document.querySelector(".chatbot-box-close");
+const chatbotEmojisBox = document.querySelector(".chatbot-emojis-box");
+const chatbotEmojisHandler = document.querySelector(".chatbot-emojis-handler");
+const chatbotNotificationHandler = document.querySelector(
+  ".chatbot-notification-handler"
+);
+const chatbotNotificationBox = document.querySelector(
+  ".chatbot-notification-box"
+);
+const chatbotRatingHandler = document.querySelector(".chatbot-rating-handler");
+const chatbotRatingBox = document.querySelector(".chatbot-rating-box");
 
+// Hover Handler
 chatbotHandler.addEventListener("mouseover", () =>
   toggleClasses(chatbotIcon, "icon-pen", "icon-message")
 );
 
+// Hover Handler
 chatbotHandler.addEventListener("mouseout", () =>
   toggleClasses(chatbotIcon, "icon-message", "icon-pen")
 );
 
 // Muestra el Chat
-handlerToggleClass(
-  chatbotHandler,
-  "translate-x-[530px]",
-  "translate-x-0",
-  chatbotBox
-);
+handlerToggleClass(chatbotHandler, "chatbot-box", "chatbot-box-is-active", chatbotBox);
 
 // Oculta el Chat
-handlerToggleClass(
-  chatbotBoxClose,
-  "translate-x-0",
-  "translate-x-[530px]",
-  chatbotBox
-);
+handlerToggleClass(chatbotBoxClose, "chatbot-box-is-active", "chatbot-box", chatbotBox);
 
 // Muestra y oculta el box de emojis
 handlerToggleClass(
   chatbotEmojisHandler,
-  "translate-y-[430px]",
-  "translate-y-0",
+  "chatbot-emojis-box",
+  "chatbot-emojis-box-is-active",
   chatbotEmojisBox
 );
 
 // Muestra y oculta el box de notifications
 handlerToggleClass(
   chatbotNotificationHandler,
-  "opacity-0",
-  "opacity-100",
+  "chatbot-notification-box",
+  "chatbot-notification-box-is-active",
   chatbotNotificationBox
 );
 
 // Muestra y oculta el box de rating
 handlerToggleClass(
   chatbotRatingHandler,
-  "opacity-0",
-  "opacity-100",
+  "chatbot-rating-box",
+  "chatbot-rating-box-is-active",
   chatbotRatingBox
 );

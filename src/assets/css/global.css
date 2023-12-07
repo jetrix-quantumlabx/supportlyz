@@ -155,6 +155,36 @@ body {
   @apply flex w-full gap-3 p-3 mb-3 transition bg-white rounded-2xl last:mb-0 hover:shadow-emerald-40
 }
 
+/* Esta clase se usa para mostrar el chat */
+.chatbot-box {
+  @apply w-[450px] transition opacity-0 translate-x-full
+}
+
+.chatbot-box-is-active {
+  @apply w-[450px] transition opacity-100 translate-x-0
+}
+
+/* Esta clase se usa para mostrar el box de emojis */
+.chatbot-emojis-box {
+  @apply translate-y-full opacity-0 invisible absolute w-full px-4 transition bg-geyser-100 rounded-xl -top-72
+}
+.chatbot-emojis-box-is-active {
+  @apply translate-y-0 opacity-100 visible absolute w-full px-4 transition bg-geyser-100 rounded-xl -top-72
+}
+/* Esta clase se usa para mostrar el box de notificaciones */
+.chatbot-notification-box {
+  @apply transition opacity-0 absolute right-0 flex items-center justify-between w-64 px-4 py-2 bg-white rounded-lg bg-opacity-70 top-[120%] -translate-y-full invisible
+}
+.chatbot-notification-box-is-active {
+  @apply transition opacity-100 absolute right-0 flex items-center justify-between w-64 px-4 py-2 bg-white rounded-lg bg-opacity-70 top-[120%] translate-y-0 visible
+}
+/* Esta clase se usa para mostrar el box de rating */
+.chatbot-rating-box {
+  @apply transition opacity-0 absolute right-0 w-52 px-4 py-2 bg-white rounded-lg bg-opacity-70 top-[120%] -translate-y-full invisible
+}
+.chatbot-rating-box-is-active {
+  @apply transition opacity-100 absolute right-0 w-52 px-4 py-2 bg-white rounded-lg bg-opacity-70 top-[120%] translate-y-0 visible
+}
 /************* Sidebar ***********/
 .sidebar-item {
   @apply flex items-center justify-center w-full relative h-28 rounded-e-3xl overflow-hidden cursor-pointer transition before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-emerald-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4
@@ -185,7 +215,7 @@ body {
   @apply block my-10 h-5 relative text-sm text-gray-400 after:content-[''] after:bg-emerald-500 after:absolute after:right-0 after:w-full after:h-px after:top-1/2 before:content-[''] before:absolute before:left-2/4 before:-translate-x-1/2 before:w-8 before:h-8 before:z-10 before:rounded-full before:bg-geyser-100
 }
 
-/************* CHATBOT ***********/
+/************* Chatbot ***********/
 .chatbot-handler {
   @apply fixed bottom-20 right-4 flex items-center justify-center w-20 h-20 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-white hover:text-emerald-500 shadow-emerald-40 hover:shadow-emerald-50
 }
@@ -193,7 +223,6 @@ body {
 .chatbot-send {
   @apply flex items-center justify-center w-16 h-16 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-white hover:text-emerald-500 shadow-emerald-40 hover:shadow-emerald-50 absolute -right-9 -top-12
 }
-
 
 /*********** UTILITIES ***********/
 
