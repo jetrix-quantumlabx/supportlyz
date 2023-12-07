@@ -108,30 +108,30 @@ body {
 
 /* Button */
 .button-gray-small {
-  @apply flex items-center justify-center w-full gap-2 py-2 text-sm text-black rounded-full cursor-pointer hover:bg-emerald-600 bg-gray-300 hover:shadow-emerald-40 hover:text-white
+  @apply flex transition items-center justify-center w-full gap-2 py-2 text-sm text-black rounded-full cursor-pointer hover:bg-emerald-600 bg-gray-300 hover:shadow-emerald-40 hover:text-white
 }
 
 .button-emerald-small {
-  @apply flex items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40
+  @apply flex transition items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40
 }
 
 .button-white-small {
-  @apply flex items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40
+  @apply flex transition items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40
 }
 
-.button-outline-white {
-  @apply px-6 py-3 text-base text-white border border-white rounded-full min-w-[200px] hover:bg-white hover:text-emerald-500 hover:shadow-emerald-40
+.button-outline-white  {
+  @apply px-6 py-3 text-base transition text-white border border-white rounded-full min-w-[200px] hover:bg-white hover:text-emerald-500 hover:shadow-emerald-40
 }
 .button-emerald {
-  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40
+  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-emerald-500 hover:shadow-emerald-40 transition
 }
 
-.button-elfgreen {
-  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-elf-green-700 hover:shadow-emerald-40
+.button-connect {
+  @apply transition flex items-center w-full gap-2 px-3 py-3 text-base text-white rounded-full cursor-pointer hover:bg-emerald-600 bg-elf-green-700 hover:shadow-emerald-40
 }
 
 .button-elfgreen-light {
-  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-elf-green-700 rounded-full cursor-pointer hover:bg-emerald-600 bg-elf-green-700 bg-opacity-50 hover:shadow-emerald-40 hover:text-white
+  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-elf-green-700 rounded-full cursor-pointer hover:bg-emerald-600 bg-elf-green-700 bg-opacity-50 hover:shadow-emerald-40 hover:text-white transition
 }
 
 /************* Search ***********/
@@ -185,6 +185,15 @@ body {
 .chatbot-rating-box-is-active {
   @apply transition opacity-100 absolute right-0 w-52 px-4 py-2 bg-white rounded-lg bg-opacity-70 top-[120%] translate-y-0 visible
 }
+
+.chatbot-handler {
+  @apply fixed bottom-20 right-4 flex items-center justify-center w-20 h-20 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-white hover:text-emerald-500 shadow-emerald-40 hover:shadow-emerald-50
+}
+
+.chatbot-send {
+  @apply flex items-center justify-center w-16 h-16 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-white hover:text-emerald-500 shadow-emerald-40 hover:shadow-emerald-50 absolute -right-9 -top-12
+}
+
 /************* Sidebar ***********/
 .sidebar-item {
   @apply flex items-center justify-center w-full relative h-28 rounded-e-3xl overflow-hidden cursor-pointer transition before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-emerald-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4
@@ -215,14 +224,6 @@ body {
   @apply block my-10 h-5 relative text-sm text-gray-400 after:content-[''] after:bg-emerald-500 after:absolute after:right-0 after:w-full after:h-px after:top-1/2 before:content-[''] before:absolute before:left-2/4 before:-translate-x-1/2 before:w-8 before:h-8 before:z-10 before:rounded-full before:bg-geyser-100
 }
 
-/************* Chatbot ***********/
-.chatbot-handler {
-  @apply fixed bottom-20 right-4 flex items-center justify-center w-20 h-20 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-white hover:text-emerald-500 shadow-emerald-40 hover:shadow-emerald-50
-}
-
-.chatbot-send {
-  @apply flex items-center justify-center w-16 h-16 text-center text-white transition delay-100 rounded-full cursor-pointer bg-emerald-500 hover:bg-white hover:text-emerald-500 shadow-emerald-40 hover:shadow-emerald-50 absolute -right-9 -top-12
-}
 
 /*********** UTILITIES ***********/
 

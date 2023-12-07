@@ -111,15 +111,17 @@ const chatbotNotificationBox = document.querySelector(
 const chatbotRatingHandler = document.querySelector(".chatbot-rating-handler");
 const chatbotRatingBox = document.querySelector(".chatbot-rating-box");
 
-// Hover Handler
-chatbotHandler.addEventListener("mouseover", () =>
-  toggleClasses(chatbotIcon, "icon-pen", "icon-message")
-);
+if (chatbotHandler) {
+  // Hover Handler
+  chatbotHandler.addEventListener("mouseover", () =>
+    toggleClasses(chatbotIcon, "icon-pen", "icon-message")
+  );
 
-// Hover Handler
-chatbotHandler.addEventListener("mouseout", () =>
-  toggleClasses(chatbotIcon, "icon-message", "icon-pen")
-);
+  // Hover Handler
+  chatbotHandler.addEventListener("mouseout", () =>
+    toggleClasses(chatbotIcon, "icon-message", "icon-pen")
+  );
+}
 
 // Muestra el Chat
 handlerToggleClass(chatbotHandler, "chatbot-box", "chatbot-box-is-active", chatbotBox);

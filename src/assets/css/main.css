@@ -630,6 +630,10 @@ video {
   z-index: 30;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1099,10 +1103,6 @@ video {
   border-radius: 9999px;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -1232,10 +1232,6 @@ video {
 
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
-}
-
-.bg-opacity-70 {
-  --tw-bg-opacity: 0.7;
 }
 
 .bg-gradient-to-b {
@@ -1538,6 +1534,16 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-penitentiary-100 {
+  --tw-text-opacity: 1;
+  color: rgb(233 239 244 / var(--tw-text-opacity));
+}
+
+.text-penitentiary-900 {
+  --tw-text-opacity: 1;
+  color: rgb(21 41 48 / var(--tw-text-opacity));
 }
 
 .placeholder-gray-400::-moz-placeholder {
@@ -2039,6 +2045,11 @@ body {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .button-gray-small:hover {
@@ -2067,6 +2078,11 @@ body {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .button-emerald-small:hover {
@@ -2093,6 +2109,11 @@ body {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .button-white-small:hover {
@@ -2117,6 +2138,11 @@ body {
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .button-outline-white:hover {
@@ -2147,6 +2173,11 @@ body {
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .button-emerald:hover {
@@ -2157,27 +2188,31 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.button-elfgreen {
+.button-connect {
   display: flex;
   width: 100%;
   cursor: pointer;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(6 131 116 / var(--tw-bg-opacity));
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
-.button-elfgreen:hover {
+.button-connect:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(27 158 85 / var(--tw-bg-opacity));
   --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.4);
@@ -2203,6 +2238,11 @@ body {
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(6 131 116 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .button-elfgreen-light:hover {
@@ -2482,6 +2522,84 @@ body {
   transition-duration: 150ms;
 }
 
+.chatbot-handler {
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  display: flex;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 200 112 / var(--tw-bg-opacity));
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.4);
+  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-delay: 100ms;
+}
+
+.chatbot-handler:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(42 200 112 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.5);
+  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #ecfdf5;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.chatbot-send {
+  position: absolute;
+  right: -2.25rem;
+  top: -3rem;
+  display: flex;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 200 112 / var(--tw-bg-opacity));
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.4);
+  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-delay: 100ms;
+}
+
+.chatbot-send:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(42 200 112 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.5);
+  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #ecfdf5;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 /************* Sidebar ***********/
 
 .sidebar-item {
@@ -2719,86 +2837,6 @@ body {
   background-color: rgb(42 200 112 / var(--tw-bg-opacity));
   --tw-content: '';
   content: var(--tw-content);
-}
-
-/************* Chatbot ***********/
-
-.chatbot-handler {
-  position: fixed;
-  bottom: 5rem;
-  right: 1rem;
-  display: flex;
-  height: 5rem;
-  width: 5rem;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(42 200 112 / var(--tw-bg-opacity));
-  text-align: center;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.4);
-  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-delay: 100ms;
-}
-
-.chatbot-handler:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(42 200 112 / var(--tw-text-opacity));
-  --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.5);
-  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: #ecfdf5;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.chatbot-send {
-  position: absolute;
-  right: -2.25rem;
-  top: -3rem;
-  display: flex;
-  height: 4rem;
-  width: 4rem;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(42 200 112 / var(--tw-bg-opacity));
-  text-align: center;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.4);
-  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-delay: 100ms;
-}
-
-.chatbot-send:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(42 200 112 / var(--tw-text-opacity));
-  --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.5);
-  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: #ecfdf5;
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 /*********** UTILITIES ***********/
