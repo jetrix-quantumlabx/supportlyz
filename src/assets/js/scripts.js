@@ -89,11 +89,28 @@ const statusDropdown = document.getElementById("status-dropdown");
 
 handlerToggleDisplay(statusHandler, statusDropdown);
 
-// Language Dropdown
+// Site Language Dropdown
 const languageHandler = document.querySelector(".language-handler");
 const languageDropdown = document.querySelector(".language-dropdown");
 
-handlerToggleDisplay(languageHandler, languageDropdown);
+handlerToggleClass(
+  languageHandler,
+  "language-dropdown",
+  "language-dropdown-is-active",
+  languageDropdown
+);
+
+// Chat Config Language Dropdown
+const chatLanguageHandler = document.querySelector(".chat-language-handler");
+const chatLanguageDropdown = document.querySelector(".chat-language-dropdown");
+
+handlerToggleClass(
+  chatLanguageHandler,
+  "chat-language-dropdown",
+  "chat-language-dropdown-is-active",
+  chatLanguageDropdown
+);
+
 
 // Chatbot
 const chatbotHandler = document.querySelector(".chatbot-handler");
@@ -151,4 +168,15 @@ handlerToggleClass(
   "chatbot-rating-box",
   "chatbot-rating-box-is-active",
   chatbotRatingBox
+);
+
+// Forms
+const handleIconPassword = document.querySelector(".icon-password");
+
+// Muestra y oculta el icono password
+handlerToggleClass(
+  handleIconPassword,
+  "icon-password",
+  "icon-password-is-active",
+  handleIconPassword
 );
