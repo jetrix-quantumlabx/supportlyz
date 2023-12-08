@@ -170,7 +170,9 @@ handlerToggleClass(
   chatbotRatingBox
 );
 
-// Forms
+// FORMULARIOS
+
+// Input Password
 const handleIconPassword = document.querySelector(".icon-password");
 
 // Muestra y oculta el icono password
@@ -180,3 +182,20 @@ handlerToggleClass(
   "icon-password-is-active",
   handleIconPassword
 );
+
+// Inputs Focus
+const inputHandlers = document.getElementsByClassName("input");
+const inputHandlerWrappers = document.getElementsByClassName("input-container");
+
+[...inputHandlers].forEach((inputHandler, i) => {
+  inputHandler.addEventListener("focusin", () => {
+    [...inputHandlerWrappers].forEach((wrapper) => {
+      wrapper.classList.remove("input-container-is-active");
+    });
+    inputHandlerWrappers[i].classList.add("input-container-is-active");
+  });
+
+  inputHandler.addEventListener("focusout", () => {
+    inputHandlerWrappers[i].classList.remove("input-container-is-active");
+  });
+});

@@ -1195,14 +1195,14 @@ video {
   border-bottom-width: 14px;
 }
 
-.border-emerald-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(42 200 112 / var(--tw-border-opacity));
-}
-
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.border-secondary-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(120 217 165 / var(--tw-border-opacity));
 }
 
 .border-white {
@@ -1215,9 +1215,9 @@ video {
   border-right-color: transparent;
 }
 
-.border-b-emerald-500 {
+.border-b-secondary-500 {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(42 200 112 / var(--tw-border-opacity));
+  border-bottom-color: rgb(120 217 165 / var(--tw-border-opacity));
 }
 
 .border-b-white {
@@ -1300,9 +1300,9 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-emerald-500 {
-  --tw-gradient-from: #2ac870 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(42 200 112 / 0) var(--tw-gradient-to-position);
+.from-secondary-500 {
+  --tw-gradient-from: #78D9A5 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(120 217 165 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -2044,7 +2044,7 @@ body {
   border-radius: 9999px;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(42 200 112 / var(--tw-border-opacity));
+  border-color: rgb(120 217 165 / var(--tw-border-opacity));
   background-color: transparent;
   text-align: center;
   font-size: 1.5rem;
@@ -2602,8 +2602,6 @@ body {
   --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.5);
   --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: #ecfdf5;
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .chatbot-send {
@@ -2641,8 +2639,6 @@ body {
   --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.5);
   --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: #ecfdf5;
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 /************* Sidebar ***********/
@@ -2658,8 +2654,8 @@ body {
   overflow: hidden;
   border-start-end-radius: 1.5rem;
   border-end-end-radius: 1.5rem;
-  --tw-gradient-from: #2ac870 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(42 200 112 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: #78D9A5 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(120 217 165 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #29C1AF var(--tw-gradient-to-position);
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -2697,8 +2693,8 @@ body {
 /* This class is used to visually highlight the sidebar item that the user has currently selected. */
 
 .sidebar-item-is-active {
-  --tw-gradient-from: #2ac870 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(42 200 112 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: #78D9A5 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(120 217 165 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #29C1AF var(--tw-gradient-to-position);
   --tw-text-opacity: 1 !important;
@@ -2970,6 +2966,11 @@ body {
 
 /************* FORM ***********/
 
+.icon-password {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .icon-password:before {
   content: '\e81e';
 }
@@ -3037,6 +3038,58 @@ body {
 .checkbox:hover::before {
   content: var(--tw-content);
   opacity: 0.1;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 1rem;
+  height: 3rem;
+  overflow: hidden;
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-shadow: 0 10px 20px rgba(104, 134, 193, 0.20);
+  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.input-container-is-active {
+  position: relative;
+  margin-bottom: 1rem;
+  height: 3rem;
+  overflow: hidden;
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(42 200 112 / var(--tw-border-opacity));
+  --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.4);
+  --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 4rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(21 41 48 / var(--tw-text-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 /*********** UTILITIES ***********/
@@ -3146,7 +3199,7 @@ body {
   color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
-.hover\:shadow-emerald-40:hover {
+.hover\:shadow-secondary-40:hover {
   --tw-shadow: 0 10px 20px rgba(42, 200, 112, 0.4);
   --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
