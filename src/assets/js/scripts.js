@@ -69,17 +69,35 @@ const sidebarLabels = document.getElementsByClassName("sidebar-label");
 });
 
 // Account
-const accountHandler = document.getElementById("account-handler");
-const accountDropdown = document.getElementById("account-dropdown");
+const account = document.querySelector(".account");
+const accountHandler = document.querySelector(".account-handler");
+const accountDropdown = document.querySelector(".account-dropdown");
 
-handlerToggleDisplay(accountHandler, accountDropdown);
+handlerToggleClass(
+  accountHandler,
+  "account",
+  "account-is-active",
+  account
+);
+
+handlerToggleClass(
+  accountHandler,
+  "account-dropdown",
+  "account-dropdown-is-active",
+  accountDropdown
+);
 
 
 // Status Dropdown
-const statusHandler = document.getElementById("status-handler");
-const statusDropdown = document.getElementById("status-dropdown");
+const statusHandler = document.querySelector(".status");
+const statusDropdown = document.querySelector(".status-dropdown");
 
-handlerToggleDisplay(statusHandler, statusDropdown);
+handlerToggleClass(
+  statusHandler,
+  "status-dropdown",
+  "status-dropdown-is-active",
+  statusDropdown
+);
 
 // Site Language Dropdown
 const languageHandler = document.querySelector(".language-handler");
