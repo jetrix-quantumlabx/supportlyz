@@ -59,7 +59,7 @@
         <div class="flex items-center justify-center h-full gap-20 px-8">
 
           <div class="flex justify-end w-3/6">
-            <div class="w-[450px]">
+            <div class="w-[490px]">
               <div class="bg-gradient-to-b from-secondary-900 to-tertiary-900 rounded-t-3xl">
                 <div class="flex items-center justify-between p-6">
                   <img src="assets/images/logo-white.svg" alt="logo" class="w-36">
@@ -147,7 +147,7 @@
                   <div class="relative">
                     <div class="p-3 rounded-xl bg-secondary-900 max-w-[280px] mb-2 relative">
                       <p class="text-sm text-white">Hello 🙋 let me know with anything that i can help you!</p>
-                      <div class="-rotate-90 h-0 w-0 border-x-[12px] absolute -left-4 top-6 border-x-transparent border-b-[14px] border-b-secondary-500"></div>
+                      <div class="-rotate-90 h-0 w-0 border-x-[12px] absolute -left-4 top-6 border-x-transparent border-b-[14px] border-b-secondary-900"></div>
                     </div>
                     <p class="text-xs text-penitentiary-500">Supportlyz - 9:39 AM</p>
                   </div>
@@ -191,8 +191,18 @@
               <div class="relative p-4 bg-white rounded-b-3xl">
 
                 <div class="relative flex items-center gap-4 mb-3">
+                  <div class="relative">
+                    <label class="chatbot-input-label" for="last">Enter your message...</label>
+                    <input
+                      type="text"
+                      class="chatbot-input"
+                      placeholder="Enter your message..."
+                      onblur="this.placeholder = 'Enter your message...'"
+                      onfocus="this.placeholder = ''"
+                    >
+                  </div>
 
-                  <input type="text" placeholder="Enter your message..." class="bg-geyser-200 rounded-full w-[350px] text-xs text-penitentiary-600 h-14 px-5 outline-none">
+
                   <div class="flex items-center">
                     <span class="flex items-center justify-center w-10 h-10 text-3xl rounded-full cursor-pointer chatbot-emojis-handler text-secondary-900 hover:bg-secondary-900 hover:bg-opacity-30">
                       <i class="icon-happy"></i>
@@ -314,11 +324,12 @@
                 <i class="icon-cog"></i>
               </span>
               <h2 class="block mb-6 text-2xl"><span class="font-medium">Configure</span> your live chat</h2>
-              <div class="relative h-12 mb-6 overflow-hidden rounded-full shadow-gray-20">
-                <span class="absolute top-0 left-0 flex items-center justify-center h-12 text-xl bg-white w-14 text-secondary-900 after:content-[''] after:absolute after:top-2 after:right-1 after:w-px after:h-8 after:z-20 after:bg-gray-300">
+              <div class="input-container">
+                <span class="absolute top-0 left-0 flex items-center justify-center h-12 text-xl bg-white w-14 text-secondary-900 after:content-[''] after:absolute after:top-2 after:right-1 after:w-px after:h-8 after:z-20 after:bg-tertiary-100">
                   <i class="icon-user"></i>
                 </span>
-                <input type="text" class="w-full h-full py-3 pl-16 text-base bg-white outline-none text-secondary-900" placeholder="Username" />
+                <input type="text" class="input" onblur="this.placeholder = 'Username'" onfocus="this.placeholder = ''">
+
               </div>
               <div class="mb-6">
                 <h5 class="mb-2 text-base text-penitentiary-900">Set your Chat colors!</h5>
@@ -376,7 +387,7 @@
 
               </div>
               <a href="step-2.html">
-                <button class="flex items-center justify-between w-64 px-4 text-base bg-white border-0 rounded-full cursor-pointer hover:bg-secondary-900 hover:text-white h-11 text-secondary-900 shadow-gray-20">
+                <button class="flex items-center justify-between w-64 px-4 text-base transition duration-500 bg-white border-0 rounded-full cursor-pointer hover:bg-secondary-900 hover:text-white h-11 text-secondary-900 shadow-gray-20">
                   <span>Continue</span>
                   <i class="text-2xl icon-arrow"></i>
                 </button>

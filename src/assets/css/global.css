@@ -131,7 +131,7 @@ body {
 }
 
 .button-connect {
-  @apply transition flex font-medium items-center delay-100 duration-500 w-full gap-2 px-3 py-3 text-base text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-tertiary-900 hover:shadow-secondary-40
+  @apply transition flex items-center delay-100 duration-500 w-full gap-2 px-3 py-3 text-base text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-tertiary-900 hover:shadow-secondary-40
 }
 
 .button-tertiary-light {
@@ -148,11 +148,11 @@ body {
 }
 
 .search-icon {
-  @apply w-16 relative flex items-center justify-center text-xl after:content-[''] after:absolute after:-top-0 after:right-0 after:w-px after:h-7 after:z-20 after:bg-secondary-100
+  @apply w-16 relative flex items-center justify-center text-xl after:content-[''] after:absolute after:-top-0 text-secondary-900 after:right-0 after:w-px after:h-7 after:z-20 after:bg-secondary-100
 }
 
 .search-input {
-  @apply w-full h-full px-4 placeholder-quaternary-400 bg-transparent outline-none text-penitentiary-900
+  @apply w-full h-full px-4 placeholder-quaternary-100 bg-transparent outline-none text-penitentiary-900
 }
 
 /************* Account ***********/
