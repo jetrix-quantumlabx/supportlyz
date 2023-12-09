@@ -237,17 +237,17 @@ body {
 
 /************* Statistics ***********/
 .statistics {
-  @apply bg-white bg-opacity-50 rounded-3xl h-[110px] w-4/5 cursor-pointer transition relative overflow-hidden before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:z-10 before:transition before:bg-secondary-900 before:duration-500
+  @apply bg-white bg-opacity-50 rounded-3xl h-[110px] w-4/5 cursor-pointer transition relative overflow-hidden before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:z-10 before:transition before:bg-secondary-900 before:duration-500 before:opacity-0 before:invisible hover:before:visible hover:before:opacity-100
 }
 
 /************* Goals ***********/
 .goals {
-  @apply w-1/3 bg-white bg-opacity-50 rounded-3xl relative overflow-hidden before:h-full before:w-full before:content-[''] before:absolute before:z-10 before:transition before:bg-secondary-900 before:duration-500 before:-translate-x-full hover:before:translate-x-0
+  @apply w-1/3 bg-white bg-opacity-50 rounded-3xl relative overflow-hidden before:h-full before:w-full before:content-[''] before:absolute before:z-10 before:bg-secondary-900 before:-translate-x-full before:opacity-0 before:invisible hover:before:visible hover:before:opacity-100 hover:before:translate-x-0 before:transition before:duration-500
 }
 
 /************* Integrations ***********/
 .integrations {
-  @apply bg-white flex items-center justify-center bg-opacity-50 rounded-3xl h-[110px] w-1/5 transition relative overflow-hidden before:h-full before:w-full before:content-[''] before:absolute before:z-10 before:transition before:bg-secondary-900 before:duration-500 before:-translate-x-full hover:before:translate-x-0
+  @apply bg-white flex items-center justify-center bg-opacity-50 rounded-3xl h-[110px] w-1/5 transition relative overflow-hidden before:h-full before:w-full before:content-[''] before:absolute before:z-10 before:transition before:bg-secondary-900 before:duration-500 before:-translate-x-full hover:before:translate-x-0 before:opacity-0 hover:before:opacity-100 before:invisible hover:before:visible
 }
 
 /************* OR ***********/

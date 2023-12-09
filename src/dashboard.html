@@ -335,12 +335,27 @@
               </div>
               <div class="flex w-full gap-5 mb-5">
                 <!-- Setup Progress  -->
-                <div
-                  class="w-1/5 bg-white bg-opacity-50 rounded-3xl h-[310px] p-5">
+                <a href="#"
+                  class="w-full max-w-[341px] bg-white bg-opacity-50 rounded-3xl h-[310px] p-5 flex flex-col justify-between group overflow-hidden">
                   <h4 class="text-lg font-medium text-center text-penitentiary-900">
                     Set Up Progress
                   </h4>
-                </div>
+
+                  <div id="set-up-progress-chart" class="flex items-center justify-center"></div>
+
+                  <div class="transition-all duration-500 h-[32px] group-hover:h-[68px] relative group-hover:translate-y-5">
+                    <div class="flex justify-between items-center relative z-10 duration-500 transition-all h-[32px] group-hover:h-[68px]">
+                      <p class="text-xs font-light tracking-[0.1px] text-firefly-900 max-w-[238px] block transition-all duration-500 group-hover:translate-y-[calc(100%+1.25rem)] group-hover:opacity-0">Complete all the steps in order to set-up your Support Bot correctly.</p>
+
+                      <span class="relative z-10 text-2xl text-secondary-900 group-hover:text-white">
+                        <i class="icon-arrow"></i>
+                      </span>
+                    </div>
+                    <div class="bg-secondary-900 opacity-0 h-[39px] transition-all duration-500 group-hover:opacity-100 group-hover:h-[68px] bottom-0 absolute translate-y-5 group-hover:-translate-y-0 -left-5 -right-5 rounded-[20px] z-0 flex items-center ps-6">
+                      <p class="absolute text-base font-medium tracking-[0.1px] text-white transition-all duration-500 translate-y-[calc(100%+1.25rem)]  group-hover:translate-y-0">Complete Set-Up</p>
+                    </div>
+                  </div>
+                </a>
 
                  <!-- Goals -->
                 <div class="w-4/5">
@@ -491,8 +506,9 @@
               </div>
               <div class="flex w-full gap-5 mb-5">
                 <!-- Performance Overview  -->
-                <div class="w-2/5 bg-white bg-opacity-50 rounded-3xl h-[420px] p-7">
-                  <h3 class="text-lg font-medium text-penitentiary-900">Performance Overview</h3>
+                <div class="w-2/5 bg-white bg-opacity-50 rounded-3xl h-[420px] flex flex-col pb-5">
+                  <h3 class="text-lg font-medium text-penitentiary-900 px-8 pt-7 pb-3.5">Performance Overview</h3>
+                  <div id="performance-overview-chart" class="grow"></div>
                 </div>
 
                 <!-- Active Campaigns -->
@@ -846,5 +862,7 @@
       </div>
     </main>
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/d3.min.js"></script>
+    <script src="assets/js/charts.js"></script>
   </body>
 </html>
