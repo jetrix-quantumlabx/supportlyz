@@ -1566,7 +1566,7 @@ video {
   opacity: 0;
 }
 
-.shadow-geyser-20 {
+.shadow-gray-20 {
   --tw-shadow: 0 10px 20px rgba(104, 134, 193, 0.20);
   --tw-shadow-colored: 0 10px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
