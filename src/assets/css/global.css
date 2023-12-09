@@ -97,56 +97,76 @@ body {
 
 /* Button Icon */
 .button-icon {
-  @apply flex items-center justify-center text-center transition delay-100 bg-white rounded-full cursor-pointer text-secondary-900 hover:bg-secondary-900 hover:text-white w-14 h-14 shadow-geyser-10 hover:shadow-secondary-40 text-2xl
+  @apply flex items-center justify-center text-center transition delay-100 duration-500 bg-white rounded-full cursor-pointer text-secondary-900 hover:bg-secondary-900 hover:text-white w-14 h-14 shadow-geyser-10 hover:shadow-secondary-40 text-2xl
+}
+.button-icon-is-active {
+  @apply flex items-center justify-center text-center transition delay-100 duration-500 bg-secondary-900 rounded-full cursor-pointer text-white w-14 h-14 shadow-secondary-40 text-2xl
 }
 .button-icon-small {
-  @apply flex items-center justify-center text-center transition delay-100 bg-white rounded-full cursor-pointer text-secondary-900 hover:bg-secondary-900 hover:text-white w-10 h-10 shadow-geyser-10 hover:shadow-secondary-40 text-xl
+  @apply flex items-center justify-center text-center transition delay-100 duration-500 bg-white rounded-full cursor-pointer text-secondary-900 hover:bg-secondary-900 hover:text-white w-10 h-10 shadow-geyser-10 hover:shadow-secondary-40 text-xl
 }
 
 .button-icon-outline {
-  @apply flex items-center justify-center text-center transition delay-100 bg-transparent rounded-full cursor-pointer border border-secondary-500 text-secondary-900 hover:bg-secondary-900 hover:text-white w-14 h-14 shadow-geyser-10 hover:shadow-secondary-40 text-2xl
+  @apply flex items-center justify-center text-center transition delay-100 duration-500 bg-transparent rounded-full cursor-pointer border border-secondary-500 text-secondary-900 hover:bg-secondary-900 hover:text-white w-14 h-14 shadow-geyser-10 hover:shadow-secondary-40 text-2xl
 }
 
 /* Button */
 .button-gray-small {
-  @apply flex transition items-center justify-center w-full gap-2 py-2 text-sm text-penitentiary-900 rounded-full cursor-pointer hover:bg-secondary-900 bg-gray-300 hover:shadow-secondary-40 hover:text-white
+  @apply flex transition delay-100 duration-500 items-center justify-center w-full gap-2 py-2 text-sm text-penitentiary-900 rounded-full cursor-pointer hover:bg-secondary-900 bg-gray-300 hover:shadow-secondary-40 hover:text-white
 }
 
-.button-emerald-small {
-  @apply flex transition items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-secondary-900 hover:shadow-secondary-40
+.button-secondary-small {
+  @apply flex transition delay-100 duration-500 items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-secondary-900 hover:shadow-secondary-40
 }
 
 .button-white-small {
-  @apply flex transition items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-secondary-900 hover:shadow-secondary-40
+  @apply flex transition delay-100 duration-500 items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-secondary-900 hover:shadow-secondary-40
 }
 
 .button-outline-white  {
-  @apply px-6 py-3 text-base transition text-white border border-white rounded-full min-w-[200px] hover:bg-white hover:text-secondary-900 hover:shadow-secondary-40
+  @apply px-6 py-3 text-base delay-100 duration-500 transition text-white border border-white rounded-full min-w-[200px] hover:bg-white hover:text-secondary-900 hover:shadow-secondary-40
 }
-.button-emerald {
-  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-secondary-900 hover:shadow-secondary-40 transition
+.button-secondary {
+  @apply flex items-center delay-100 duration-500 justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-secondary-900 hover:shadow-secondary-40 transition
 }
 
 .button-connect {
-  @apply transition flex items-center w-full gap-2 px-3 py-3 text-base text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-elf-green-700 hover:shadow-secondary-40
+  @apply transition flex items-center delay-100 duration-500 w-full gap-2 px-3 py-3 text-base text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-tertiary-900 hover:shadow-secondary-40
 }
 
 .button-elfgreen-light {
-  @apply flex items-center justify-center w-full gap-2 px-6 py-3 text-base text-elf-green-700 rounded-full cursor-pointer hover:bg-secondary-900 bg-elf-green-700 bg-opacity-50 hover:shadow-secondary-40 hover:text-white transition
+  @apply flex items-center delay-100 duration-500 justify-center w-full gap-2 px-6 py-3 text-base text-tertiary-900 rounded-full cursor-pointer hover:bg-secondary-900 bg-tertiary-900 bg-opacity-50 hover:shadow-secondary-40 hover:text-white transition
 }
 
 /************* Search ***********/
 .search {
-  @apply relative w-2/5 bg-white rounded-full h-14 flex items-center overflow-hidden
+  @apply relative w-2/5 bg-white transition rounded-full h-14 flex items-center overflow-hidden hover:shadow-geyser-20 text-penitentiary-400
+}
+
+.search-is-active {
+  @apply relative w-2/5 bg-white transition rounded-full h-14 flex items-center overflow-hidden shadow-secondary-40 border border-secondary-900 text-secondary-900
 }
 
 .search-icon {
-  @apply w-16 relative flex items-center justify-center text-xl text-secondary-900 after:content-[''] after:absolute after:-top-0 after:right-0 after:w-px after:h-7 after:z-20 after:bg-emerald-100
+  @apply w-16 relative flex items-center justify-center text-xl after:content-[''] after:absolute after:-top-0 after:right-0 after:w-px after:h-7 after:z-20 after:bg-secondary-100
+}
+
+.search-input {
+  @apply w-full h-full px-4 placeholder-quaternary-400 bg-transparent outline-none text-penitentiary-900
 }
 
 /************* Account ***********/
 .account {
-  @apply p-2 relative transition delay-100 bg-white rounded-full cursor-pointer hover:bg-secondary-900 shadow-geyser-10 hover:shadow-secondary-40
+  @apply p-2 relative transition delay-100 bg-white rounded-full cursor-pointer shadow-geyser-10 hover:shadow-secondary-40
+}
+
+/************* Notifications ***********/
+.notification-center {
+  @apply min-w-[330px] bg-white backdrop-blur-sm transition bg-opacity-50  opacity-0 invisible rounded-2xl absolute top-[120%] z-10 right-0 p-4 -translate-y-full
+}
+
+.notification-center-is-active {
+  @apply min-w-[330px] bg-white backdrop-blur-sm transition bg-opacity-50 opacity-100 visible rounded-2xl absolute top-[120%] z-10 right-0 p-4 translate-y-0
 }
 
 /************* Chat Box ***********/
@@ -174,17 +194,17 @@ body {
 }
 /* Esta clase se usa para mostrar el box de notificaciones */
 .chatbot-notification-box {
-  @apply transition opacity-0 absolute right-0 flex items-center justify-between w-64 px-4 py-2 bg-white rounded-lg bg-opacity-70 top-[120%] -translate-y-full invisible
+  @apply transition opacity-0 backdrop-blur-sm bg-opacity-50 absolute right-0 flex items-center justify-between w-64 px-4 py-2 bg-white rounded-lg top-[120%] -translate-y-full invisible
 }
 .chatbot-notification-box-is-active {
-  @apply transition opacity-100 absolute right-0 flex items-center justify-between w-64 px-4 py-2 bg-white rounded-lg bg-opacity-70 top-[120%] translate-y-0 visible
+  @apply transition opacity-100 backdrop-blur-sm absolute right-0 flex items-center justify-between w-64 px-4 py-2 bg-white rounded-lg bg-opacity-50 top-[120%] translate-y-0 visible
 }
 /* Esta clase se usa para mostrar el box de rating */
 .chatbot-rating-box {
-  @apply transition opacity-0 absolute right-0 w-52 px-4 py-2 bg-white rounded-lg bg-opacity-70 top-[120%] -translate-y-full invisible
+  @apply transition opacity-0 backdrop-blur-sm absolute right-0 w-52 px-4 py-2 bg-white rounded-lg bg-opacity-50 top-[120%] -translate-y-full invisible
 }
 .chatbot-rating-box-is-active {
-  @apply transition opacity-100 absolute right-0 w-52 px-4 py-2 bg-white rounded-lg bg-opacity-70 top-[120%] translate-y-0 visible
+  @apply transition opacity-100 absolute backdrop-blur-sm right-0 w-52 px-4 py-2 bg-white rounded-lg bg-opacity-50 top-[120%] translate-y-0 visible
 }
 
 .chatbot-handler {
@@ -195,14 +215,24 @@ body {
   @apply flex items-center justify-center w-16 h-16 text-center text-white transition delay-100 rounded-full cursor-pointer bg-secondary-900 hover:bg-white hover:text-secondary-900 shadow-secondary-40 hover:shadow-secondary-50 absolute -right-9 -top-12
 }
 
+.chatbot-input {
+  @apply bg-geyser-200 rounded-full w-[350px] text-sm text-penitentiary-600 h-14 px-5 outline-none transition hover:bg-secondary-200
+}
+.chatbot-input-label {
+  @apply absolute text-base transition left-5 top-4 text-penitentiary-600 opacity-0 invisible
+}
+.chatbot-input-label-is-active {
+  @apply absolute text-[10px] transition left-5 top-4 text-secondary-900 -translate-y-4 opacity-100 visible
+}
+
 /************* Sidebar ***********/
 .sidebar-item {
-  @apply flex items-center justify-center w-full relative h-28 rounded-e-3xl overflow-hidden cursor-pointer transition before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-secondary-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4
+  @apply flex items-center justify-center w-[90%] relative h-28 rounded-e-3xl overflow-hidden cursor-pointer transition before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-secondary-900 to-tertiary-700 before:border-tertiary-900 before:border-l-4
 }
 
 /* This class is used to visually highlight the sidebar item that the user has currently selected. */
 .sidebar-item-is-active {
-  @apply before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-secondary-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4 !text-white
+  @apply before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-secondary-900 to-tertiary-700 before:border-tertiary-900 before:border-l-4 !text-white
 }
 
 /************* Statistics ***********/
@@ -222,7 +252,7 @@ body {
 
 /************* OR ***********/
 .or-line {
-  @apply block my-10 h-5 relative text-sm text-gray-400 after:content-[''] after:bg-secondary-900 after:absolute after:right-0 after:w-full after:h-px after:top-1/2 before:content-[''] before:absolute before:left-2/4 before:-translate-x-1/2 before:w-8 before:h-8 before:z-10 before:rounded-full before:bg-geyser-100
+  @apply block my-10 h-5 relative text-sm text-penitentiary-400 after:content-[''] after:bg-secondary-900 after:absolute after:right-0 after:w-full after:h-px after:top-1/2 before:content-[''] before:absolute before:left-2/4 before:-translate-x-1/2 before:w-8 before:h-8 before:z-10 before:rounded-full before:bg-geyser-100
 }
 
 /************* LANGUAGE ***********/
@@ -249,7 +279,7 @@ body {
 
 /************* FORM ***********/
 .icon-password {
-  @apply icon-hide text-gray-400
+  @apply icon-hide text-penitentiary-400
 }
 
 .icon-password-is-active {

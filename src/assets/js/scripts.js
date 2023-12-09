@@ -54,14 +54,6 @@ const handleMouseOver = (sidebarLabel) =>
 const handleMouseOut = (sidebarLabel) =>
   toggleClasses(sidebarLabel, "opacity-1", "opacity-0");
 
-// Notifications
-const notificationHandler = document.querySelector(".notification-handler");
-const notificationCenter = document.querySelector(".notification-center");
-handlerToggleDisplay(notificationHandler, notificationCenter);
-
-// document.addEventListener("click", (event) =>
-//   handleClickAway(event, notificationHandler, notificationCenter)
-// );
 
 // Sidebar
 const sidebarHandlers = document.getElementsByClassName("sidebar-handler");
@@ -119,6 +111,7 @@ const chatbotBox = document.querySelector(".chatbot-box");
 const chatbotBoxClose = document.querySelector(".chatbot-box-close");
 const chatbotEmojisBox = document.querySelector(".chatbot-emojis-box");
 const chatbotEmojisHandler = document.querySelector(".chatbot-emojis-handler");
+
 const chatbotNotificationHandler = document.querySelector(
   ".chatbot-notification-handler"
 );
@@ -170,32 +163,58 @@ handlerToggleClass(
   chatbotRatingBox
 );
 
+// Efecto para el label del input del chat
+const chatbotInput = document.querySelector(".chatbot-input");
+const chatbotInputLabel = document.querySelector(".chatbot-input-label");
+
+if (chatbotInput) {
+  chatbotInput.addEventListener("focusin", () => {
+    chatbotInputLabel.classList.toggle("chatbot-input-label-is-active");
+  });
+  chatbotInput.addEventListener("focusout", () => {
+    chatbotInputLabel.classList.toggle("chatbot-input-label-is-active");
+  });
+}
+
 // FORMULARIOS
-
-// Input Password
-const handleIconPassword = document.querySelector(".icon-password");
-
-// Muestra y oculta el icono password
-handlerToggleClass(
-  handleIconPassword,
-  "icon-password",
-  "icon-password-is-active",
-  handleIconPassword
-);
 
 // Inputs Focus
 const inputHandlers = document.getElementsByClassName("input");
-const inputHandlerWrappers = document.getElementsByClassName("input-container");
+const inputWrappers = document.getElementsByClassName("input-container");
 
 [...inputHandlers].forEach((inputHandler, i) => {
   inputHandler.addEventListener("focusin", () => {
-    [...inputHandlerWrappers].forEach((wrapper) => {
+    [...inputWrappers].forEach((wrapper) => {
       wrapper.classList.remove("input-container-is-active");
     });
-    inputHandlerWrappers[i].classList.add("input-container-is-active");
+    inputWrappers[i].classList.add("input-container-is-active");
   });
 
   inputHandler.addEventListener("focusout", () => {
-    inputHandlerWrappers[i].classList.remove("input-container-is-active");
+    inputWrappers[i].classList.remove("input-container-is-active");
   });
 });
+
+// Search
+const searchHandler = document.querySelector(".search-input");
+const searchWrapper = document.querySelector(".search");
+
+if (searchHandler) {
+  searchHandler.addEventListener("focusin", () => {
+    searchWrapper.classList.toggle("search-is-active");
+  });
+  searchHandler.addEventListener("focusout", () => {
+    searchWrapper.classList.toggle("search-is-active");
+  });
+}
+
+// Notifications
+const notificationHandler = document.querySelector(".notification-handler");
+const notificationCenter = document.querySelector(".notification-center");
+
+if (notificationHandler) {
+  notificationHandler.addEventListener("click", () => {
+    notificationCenter.classList.toggle("notification-center-is-active");
+    notificationHandler.classList.toggle("button-icon-is-active");
+  });
+}
