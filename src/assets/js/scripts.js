@@ -348,10 +348,30 @@
       switchText
     );
 
-    // Agrega un controlador de eventos de clic al elemento
-    switchHandler.addEventListener("click", function () {
-      switchText.textContent = switchText.textContent.trim() === "OFF" ? "ON" : "OFF";
+    // Change switch label
+    const changeSwitchLabel = () => {
+      if (!switchHandler) return;
+      switchHandler.addEventListener("click", function () {
+        switchText.textContent = switchText.textContent.trim() === "OFF" ? "ON" : "OFF";
+      });
+    }
+
+    changeSwitchLabel()
+
+    const selectHandlers = document.getElementsByClassName("select-handler");
+    const selectDropdowns = document.getElementsByClassName("select-dropdown");
+
+    [...selectHandlers].forEach((selectHandler, i) => {
+      toggleClassWithEvent(
+        "click",
+        selectHandler,
+        "select-dropdown-is-active",
+        "select-dropdown",
+        selectDropdowns[i]
+      );
     });
+
+
   }
 
   init();

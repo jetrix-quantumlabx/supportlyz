@@ -333,6 +333,8 @@ body {
 }
 
 /************* FORM ***********/
+
+/* Icon password */
 .icon-password {
   @apply icon-hide text-penitentiary-400
 }
@@ -341,10 +343,12 @@ body {
   @apply icon-show text-secondary-900
 }
 
+/* Checkbox */
 .checkbox {
   @apply relative h-5 w-5 cursor-pointer appearance-none rounded-sm border-2 border-secondary-600 transition-all before:absolute before:content-[''] before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-gray-500 before:opacity-0 before:transition-opacity checked:border-secondary-900 checked:bg-secondary-900 checked:before:bg-secondary-900 hover:before:opacity-10
 }
 
+/* Input */
 .input-container {
   @apply relative h-[50px] transition overflow-hidden border rounded-full shadow-gray-20
 }
@@ -355,6 +359,7 @@ body {
 .input {
   @apply w-full h-full py-3 pl-16 text-sm bg-white outline-none text-penitentiary-900
 }
+/* Switch */
 .switch {
   @apply w-8 p-[2px] bg-white border rounded-full border-penitentiary-200  cursor-pointer
 }
@@ -372,6 +377,24 @@ body {
 }
 .switch-toggle-is-active {
   @apply block w-3 h-3 rounded-full bg-secondary-900 translate-x-[15px] transition
+}
+
+/* Select */
+.select-container {
+  @apply relative w-[500px] text-penitentiary-900 bg-white hover:bg-secondary-900 hover:text-white rounded-full hover:shadow-secondary-40 shadow-gray-20
+}
+
+.select-handler {
+  @apply flex items-center justify-between h-[50px] gap-3 px-5 py-3 cursor-pointer
+}
+.select-dropdown {
+  @apply shadow-gray-20 absolute left-0 w-full p-2 bg-white rounded-lg top-[110%] opacity-0 transition -translate-y-[50px] invisible
+}
+.select-dropdown-is-active {
+  @apply shadow-gray-20 absolute left-0 w-full p-2 bg-white rounded-lg top-[110%] opacity-100 transition translate-y-0 visible
+}
+.select-dropdown-item {
+  @apply mb-2 last:mb-0 cursor-pointer flex items-center justify-center h-[40px] w-full bg-[#D9E4EA] text-sm text-penitentiary-500 rounded-full hover:bg-secondary-900 hover:text-white
 }
 
 /************* GRADIENT ***********/
