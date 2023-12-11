@@ -149,7 +149,7 @@
                     </div>
                   </div>
                   <div class="relative">
-                    <div class="status">
+                    <div class="status-handler">
                       <p class="text-sm font-medium text-secondary-900">Connected</p>
                       <span class="text-secondary-900 text-[8px]"><i class="icon-chevron"></i></span>
                     </div>
@@ -200,8 +200,7 @@
         <!-- Sidebar -->
         <div class="bg-geyser-100 w-28">
           <div class="relative sidebar-handler">
-            <span
-              class="absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-0 sidebar-label -top-2 left-10 bg-tertiary-900 whitespace-nowrap">
+            <span class="sidebar-label">
               Dashboard
             </span>
             <div
@@ -212,8 +211,7 @@
             </div>
           </div>
           <div class="relative sidebar-handler">
-            <span
-              class="absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize transition rounded-full opacity-0 sidebar-label -top-2 left-10 bg-tertiary-900 whitespace-nowrap">
+            <span class="sidebar-label">
               Messages
             </span>
             <div class="sidebar-item group text-secondary-900">
@@ -227,8 +225,7 @@
             </div>
           </div>
           <div class="relative sidebar-handler">
-            <span
-              class="absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-0 -top-2 left-10 bg-tertiary-900 whitespace-nowrap sidebar-label">
+            <span class="sidebar-label">
               Chatbots
             </span>
             <div class="sidebar-item group text-secondary-900">
@@ -238,8 +235,7 @@
             </div>
           </div>
           <div class="relative sidebar-handler">
-            <span
-              class="absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-0 -top-2 left-10 bg-tertiary-900 whitespace-nowrap sidebar-label">
+            <span class="sidebar-label">
               Sully
             </span>
             <div class="sidebar-item group text-secondary-900">
@@ -249,8 +245,7 @@
             </div>
           </div>
           <div class="relative sidebar-handler">
-            <span
-              class="absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-0 -top-2 left-10 bg-tertiary-900 whitespace-nowrap sidebar-label">
+            <span class="sidebar-label">
               Mail Marketing
             </span>
             <div class="sidebar-item group text-secondary-900">
@@ -260,8 +255,7 @@
             </div>
           </div>
           <div class="relative sidebar-handler">
-            <span
-              class="absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-0 -top-2 left-10 bg-tertiary-900 whitespace-nowrap sidebar-label">
+            <span class="sidebar-label">
               Leads
             </span>
             <div class="sidebar-item group text-secondary-900">
@@ -271,8 +265,7 @@
             </div>
           </div>
           <div class="relative sidebar-handler">
-            <span
-              class="absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-0 -top-2 left-10 bg-tertiary-900 whitespace-nowrap sidebar-label">
+            <span class="sidebar-label">
               Analytics
             </span>
             <div class="sidebar-item group text-secondary-900">
@@ -282,8 +275,7 @@
             </div>
           </div>
           <div class="relative sidebar-handler">
-            <span
-              class="absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-0 -top-2 left-10 bg-tertiary-900 whitespace-nowrap sidebar-label">
+            <span class="sidebar-label">
               Integrations
             </span>
             <div class="text-penitentiary-400 sidebar-item group">
@@ -293,8 +285,7 @@
             </div>
           </div>
           <div class="relative sidebar-handler">
-            <span
-              class="absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-0 -top-2 left-10 bg-tertiary-900 whitespace-nowrap sidebar-label">
+            <span class="sidebar-label">
               Settings
             </span>
             <div class="text-penitentiary-400 sidebar-item group">
@@ -447,7 +438,7 @@
                     <!-- Statistics  -->
                     <div class="statistics group">
                       <div
-                        class="relative z-30 flex items-center justify-around h-full pl-10 transition translate-x-0 group-hover:-translate-x-8 [&>*:nth-child(2)]:border-x">
+                        class="relative z-30 flex items-center justify-around h-full pl-8 transition translate-x-0 group-hover:-translate-x-8 [&>*:nth-child(2)]:border-x">
                         <div
                           class="flex items-center gap-3 px-6 border-gray-300 group-hover:text-white">
                           <span
@@ -455,7 +446,7 @@
                             <i class="icon-user"></i>
                           </span>
                           <div>
-                            <p class="text-penitentiary-400 group-hover:text-white">
+                            <p class="text-sm text-penitentiary-400 group-hover:text-white">
                               Total Users
                             </p>
                             <h5
@@ -472,7 +463,7 @@
                             <i class="icon-browser"></i>
                           </span>
                           <div>
-                            <p class="text-penitentiary-400 group-hover:text-white">
+                            <p class="text-sm text-penitentiary-400 group-hover:text-white">
                               Satisfaction Ratio
                             </p>
                             <h5
@@ -489,7 +480,7 @@
                             <i class="icon-message"></i>
                           </span>
                           <div>
-                            <p class="text-penitentiary-400 group-hover:text-white">
+                            <p class="text-sm text-penitentiary-400 group-hover:text-white">
                               Successful Clients
                             </p>
                             <h5
@@ -500,7 +491,7 @@
                         </div>
 
                         <span
-                          class="text-5xl text-white transition translate-x-20 group-hover:translate-x-0">
+                          class="text-5xl text-white transition translate-x-20 group-hover:translate-x-5">
                           <i class="icon-arrow"></i>
                         </span>
                       </div>

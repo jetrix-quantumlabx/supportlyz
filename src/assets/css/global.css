@@ -176,7 +176,7 @@ body {
 }
 
 /************* Status ***********/
-.status {
+.status-handler {
   @apply flex items-center justify-between h-10 px-4 mb-3 border-2 rounded-full border-secondary-500 text-secondary-900
 }
 .status-dropdown {
@@ -204,11 +204,11 @@ body {
 
 /* Esta clase se usa para mostrar el chat */
 .chatbot-box {
-  @apply w-[450px] transition opacity-0 translate-x-full
+  @apply w-[490px] transition opacity-0 translate-x-full
 }
 
 .chatbot-box-is-active {
-  @apply w-[450px] transition opacity-100 translate-x-0
+  @apply w-[490px] transition opacity-100 translate-x-0
 }
 
 /* Esta clase se usa para mostrar el box de emojis */
@@ -259,6 +259,13 @@ body {
 /* This class is used to visually highlight the sidebar item that the user has currently selected. */
 .sidebar-item-is-active {
   @apply before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-secondary-900 to-tertiary-700 before:border-tertiary-900 before:border-l-4 !text-white
+}
+
+.sidebar-label {
+  @apply absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-0  invisible -top-2 left-10 bg-tertiary-900 whitespace-nowrap transition delay-1000
+}
+.sidebar-label-is-active {
+  @apply absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-100 visible -top-2 left-10 bg-tertiary-900 whitespace-nowrap transition delay-1000
 }
 
 /************* Statistics ***********/
