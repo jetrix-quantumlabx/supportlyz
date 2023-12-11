@@ -140,11 +140,11 @@ body {
 
 /************* Search ***********/
 .search {
-  @apply relative w-2/5 bg-white transition rounded-full h-14 flex items-center overflow-hidden hover:shadow-gray-20 text-penitentiary-400
+  @apply relative bg-white transition rounded-full h-14 flex items-center overflow-hidden hover:shadow-gray-20 text-penitentiary-400
 }
 
 .search-is-active {
-  @apply relative w-2/5 bg-white transition rounded-full h-14 flex items-center overflow-hidden shadow-secondary-40 border border-secondary-900 text-secondary-900
+  @apply relative bg-white transition rounded-full h-14 flex items-center overflow-hidden shadow-secondary-40 border border-secondary-900 text-secondary-900
 }
 
 .search-icon {
@@ -229,12 +229,16 @@ body {
   @apply w-[490px] transition opacity-100 translate-x-0
 }
 
+.chatbot-sent {
+  @apply p-3 rounded-xl bg-gradient-to-b max-w-[280px] mb-2 relative
+}
+
 /* Esta clase se usa para mostrar el box de emojis */
 .chatbot-emojis-box {
-  @apply translate-y-full opacity-0 invisible absolute w-full px-4 transition bg-geyser-100 rounded-xl -top-72
+  @apply translate-y-full opacity-0 invisible absolute w-full px-4 transition bg-geyser-100 rounded-xl -top-80
 }
 .chatbot-emojis-box-is-active {
-  @apply translate-y-0 opacity-100 visible absolute w-full px-4 transition bg-geyser-100 rounded-xl -top-72
+  @apply translate-y-0 opacity-100 visible absolute w-full px-4 transition bg-geyser-100 rounded-xl -top-80
 }
 /* Esta clase se usa para mostrar el box de notificaciones */
 .chatbot-notification-box {
@@ -368,6 +372,14 @@ body {
 }
 .switch-toggle-is-active {
   @apply block w-3 h-3 rounded-full bg-secondary-900 translate-x-[15px] transition
+}
+
+/************* GRADIENT ***********/
+.green-gradient {
+  @apply from-secondary-900 to-tertiary-900
+}
+.blue-gradient {
+  @apply from-[#13DDEA] to-[#915EFF]
 }
 
 /*********** UTILITIES ***********/

@@ -554,12 +554,16 @@ video {
   bottom: -0.25rem;
 }
 
-.-left-4 {
-  left: -1rem;
+.-bottom-\[85px\] {
+  bottom: -85px;
 }
 
 .-left-5 {
   left: -1.25rem;
+}
+
+.-left-\[15px\] {
+  left: -15px;
 }
 
 .-left-\[500px\] {
@@ -582,6 +586,10 @@ video {
   right: -1.25rem;
 }
 
+.-right-\[14px\] {
+  right: -14px;
+}
+
 .-top-1 {
   top: -0.25rem;
 }
@@ -600,6 +608,10 @@ video {
 
 .left-2\/4 {
   left: 50%;
+}
+
+.left-\[50px\] {
+  left: 50px;
 }
 
 .right-0 {
@@ -755,6 +767,10 @@ video {
   height: 0.875rem;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -773,10 +789,6 @@ video {
 
 .h-7 {
   height: 1.75rem;
-}
-
-.h-8 {
-  height: 2rem;
 }
 
 .h-\[100\%\] {
@@ -899,6 +911,10 @@ video {
   width: 50%;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .w-36 {
   width: 9rem;
 }
@@ -933,10 +949,6 @@ video {
 
 .w-7 {
   width: 1.75rem;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .w-80 {
@@ -1192,6 +1204,11 @@ video {
   border-width: 2px;
 }
 
+.border-x-\[10px\] {
+  border-left-width: 10px;
+  border-right-width: 10px;
+}
+
 .border-x-\[12px\] {
   border-left-width: 12px;
   border-right-width: 12px;
@@ -1203,6 +1220,10 @@ video {
 
 .border-b-2 {
   border-bottom-width: 2px;
+}
+
+.border-b-\[10px\] {
+  border-bottom-width: 10px;
 }
 
 .border-b-\[14px\] {
@@ -1217,6 +1238,11 @@ video {
 .border-secondary-500 {
   --tw-border-opacity: 1;
   border-color: rgb(120 217 165 / var(--tw-border-opacity));
+}
+
+.border-secondary-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(42 200 112 / var(--tw-border-opacity));
 }
 
 .border-white {
@@ -1358,10 +1384,6 @@ video {
   padding: 2rem;
 }
 
-.p-\[2px\] {
-  padding: 2px;
-}
-
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1466,10 +1488,6 @@ video {
   padding-left: 2rem;
 }
 
-.pl-\[60px\] {
-  padding-left: 60px;
-}
-
 .ps-6 {
   padding-inline-start: 1.5rem;
 }
@@ -1503,6 +1521,11 @@ video {
 
 .text-6xl {
   font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -2375,7 +2398,6 @@ body {
   position: relative;
   display: flex;
   height: 3.5rem;
-  width: 40%;
   align-items: center;
   overflow: hidden;
   border-radius: 9999px;
@@ -2400,7 +2422,6 @@ body {
   position: relative;
   display: flex;
   height: 3.5rem;
-  width: 40%;
   align-items: center;
   overflow: hidden;
   border-radius: 9999px;
@@ -2830,12 +2851,21 @@ body {
   transition-duration: 150ms;
 }
 
+.chatbot-sent {
+  position: relative;
+  margin-bottom: 0.5rem;
+  max-width: 280px;
+  border-radius: 0.75rem;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  padding: 0.75rem;
+}
+
 /* Esta clase se usa para mostrar el box de emojis */
 
 .chatbot-emojis-box {
   visibility: hidden;
   position: absolute;
-  top: -18rem;
+  top: -20rem;
   width: 100%;
   --tw-translate-y: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2855,7 +2885,7 @@ body {
 .chatbot-emojis-box-is-active {
   visibility: visible;
   position: absolute;
-  top: -18rem;
+  top: -20rem;
   width: 100%;
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3712,6 +3742,22 @@ body {
   transition-duration: 150ms;
 }
 
+/************* GRADIENT ***********/
+
+.green-gradient {
+  --tw-gradient-from: #2AC870 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(42 200 112 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #068374 var(--tw-gradient-to-position);
+}
+
+.blue-gradient {
+  --tw-gradient-from: #13DDEA var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(19 221 234 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #915EFF var(--tw-gradient-to-position);
+}
+
 /*********** UTILITIES ***********/
 
 .line-normal {
@@ -3746,11 +3792,6 @@ body {
 .after\:z-20::after {
   content: var(--tw-content);
   z-index: 20;
-}
-
-.after\:h-5::after {
-  content: var(--tw-content);
-  height: 1.25rem;
 }
 
 .after\:h-8::after {
