@@ -51,6 +51,21 @@
     );
 
     /**
+     *************** ACCOUNT WEBSITE ****************
+     */
+
+    const websiteHandler = document.querySelector(".website-handler");
+    const websiteDropdown = document.querySelector(".website-dropdown");
+
+    toggleClassWithEvent(
+      "click",
+      websiteHandler,
+      "website-dropdown",
+      "website-dropdown-is-active",
+      websiteDropdown
+    );
+
+    /**
      *************** STATUS DROPDOWN ****************
      */
     const statusHandler = document.querySelector(".status-handler");
@@ -273,23 +288,27 @@
       );
     });
 
-    // FORMULARIOS
-
-    // Inputs Focus
+    /**
+     *************** FORMULARIOS ****************
+     */
     const inputHandlers = document.getElementsByClassName("input");
     const inputWrappers = document.getElementsByClassName("input-container");
 
     [...inputHandlers].forEach((inputHandler, i) => {
-      inputHandler.addEventListener("focusin", () => {
-        [...inputWrappers].forEach((wrapper) => {
-          wrapper.classList.remove("input-container-is-active");
-        });
-        inputWrappers[i].classList.add("input-container-is-active");
-      });
-
-      inputHandler.addEventListener("focusout", () => {
-        inputWrappers[i].classList.remove("input-container-is-active");
-      });
+      toggleClassWithEvent(
+        "focusin",
+        inputHandler,
+        "input-container-is-active",
+        "input-container",
+        inputWrappers[i]
+      );
+      toggleClassWithEvent(
+        "focusout",
+        inputHandler,
+        "input-container",
+        "input-container-is-active",
+        inputWrappers[i]
+      );
     });
   }
 
