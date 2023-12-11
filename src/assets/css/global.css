@@ -346,14 +346,14 @@ body {
 }
 
 .input-container {
-  @apply relative h-12 mb-4 transition overflow-hidden border rounded-full shadow-gray-20
+  @apply relative h-[50px] transition overflow-hidden border rounded-full shadow-gray-20
 }
 .input-container-is-active {
-  @apply relative h-12 mb-4 transition overflow-hidden border rounded-full shadow-secondary-40 border-secondary-900
+  @apply relative h-[50px] transition overflow-hidden border rounded-full shadow-secondary-40 border-secondary-900
 }
 
 .input {
-  @apply w-full h-full py-3 pl-16 text-base bg-white outline-none text-penitentiary-900
+  @apply w-full h-full py-3 pl-16 text-sm bg-white outline-none text-penitentiary-900
 }
 .switch {
   @apply w-8 p-[2px] bg-white border rounded-full border-penitentiary-200  cursor-pointer
@@ -380,6 +380,14 @@ body {
 }
 .blue-gradient {
   @apply from-[#13DDEA] to-[#915EFF]
+}
+
+/************* STEPS ***********/
+.experience-item {
+  @apply relative flex flex-col items-center justify-center w-56 h-56 p-3 overflow-hidden text-center list-none transition bg-white rounded-full shadow-gray-20 hover:bg-secondary-900
+}
+.experience-item-check {
+  @apply absolute -bottom-[85px] left-[50px] w-32 h-32 rounded-full bg-tertiary-900 flex items-start justify-center p-3 translate-y-full group-hover:translate-y-0 transition
 }
 
 /*********** UTILITIES ***********/
