@@ -33,6 +33,7 @@
     const account = document.querySelector(".account");
     const accountHandler = document.querySelector(".account-handler");
     const accountDropdown = document.querySelector(".account-dropdown");
+    const accountMessageIcon = document.querySelector(".account-message-icon");
 
     toggleClassWithEvent(
       "click",
@@ -48,6 +49,14 @@
       "account-dropdown",
       "account-dropdown-is-active",
       accountDropdown
+    );
+
+    toggleClassWithEvent(
+      "click",
+      accountHandler,
+      "account-message-icon",
+      "account-message-icon-is-active",
+      accountMessageIcon
     );
 
     /**
@@ -294,6 +303,7 @@
     const inputHandlers = document.getElementsByClassName("input");
     const inputWrappers = document.getElementsByClassName("input-container");
 
+    // Input focus
     [...inputHandlers].forEach((inputHandler, i) => {
       toggleClassWithEvent(
         "focusin",

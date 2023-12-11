@@ -175,6 +175,13 @@ body {
   @apply w-[280px] backdrop-blur-md bg-white bg-opacity-30 rounded-2xl absolute top-[120%] z-10 overflow-hidden -left-4 transition translate-y-0 opacity-100 visible
 }
 
+.account-message-icon {
+  @apply text-lg text-secondary-900
+}
+.account-message-icon-is-active {
+  @apply text-lg text-white
+}
+
 /************* Status ***********/
 .status-handler {
   @apply flex items-center justify-between h-10 px-4 mb-3 border-2 rounded-full border-secondary-500 text-secondary-900
