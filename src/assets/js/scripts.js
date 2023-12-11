@@ -320,6 +320,38 @@
         inputWrappers[i]
       );
     });
+
+    const switchHandler = document.querySelector(".switch");
+    const switchToggle = document.querySelector(".switch-toggle");
+    const switchText = document.querySelector(".switch-label");
+
+    // Switch
+    toggleClassWithEvent(
+      "click",
+      switchHandler,
+      "switch-toggle-is-active",
+      "switch-toggle",
+      switchToggle
+    );
+    toggleClassWithEvent(
+      "click",
+      switchHandler,
+      "switch-is-active",
+      "switch",
+      switchHandler
+    );
+    toggleClassWithEvent(
+      "click",
+      switchHandler,
+      "switch-label-is-active",
+      "switch-label",
+      switchText
+    );
+
+    // Agrega un controlador de eventos de clic al elemento
+    switchHandler.addEventListener("click", function () {
+      switchText.textContent = switchText.textContent.trim() === "OFF" ? "ON" : "OFF";
+    });
   }
 
   init();
