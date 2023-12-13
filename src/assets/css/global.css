@@ -238,7 +238,7 @@ body {
 
 /* Esta clase se usa para mostrar el box de emojis */
 .chatbot-emojis-box {
-  @apply translate-y-full opacity-0 invisible absolute w-full px-4 transition bg-geyser-100 rounded-xl -top-80
+  @apply translate-y-[10%] opacity-0 invisible absolute w-full px-4 transition bg-geyser-100 rounded-xl -top-80
 }
 .chatbot-emojis-box-is-active {
   @apply translate-y-0 opacity-100 visible absolute w-full px-4 transition bg-geyser-100 rounded-xl -top-80
@@ -396,10 +396,10 @@ body {
   @apply flex items-center justify-between h-[50px] gap-3 px-5 py-3 cursor-pointer
 }
 .select-dropdown {
-  @apply shadow-gray-20 absolute left-0 w-full p-2 bg-white rounded-lg top-[110%] opacity-0 transition -translate-y-[50px] invisible
+  @apply shadow-gray-20 absolute left-0 w-full p-2 bg-white rounded-lg top-[110%] opacity-0 transition -translate-y-[50px] invisible z-20
 }
 .select-dropdown-is-active {
-  @apply shadow-gray-20 absolute left-0 w-full p-2 bg-white rounded-lg top-[110%] opacity-100 transition translate-y-0 visible
+  @apply shadow-gray-20 absolute left-0 w-full p-2 bg-white rounded-lg top-[110%] opacity-100 transition translate-y-0 visible z-20
 }
 .select-dropdown-item {
   @apply mb-2 last:mb-0 cursor-pointer flex items-center justify-center h-[40px] w-full bg-[#D9E4EA] text-sm text-penitentiary-500 rounded-full hover:bg-secondary-900 hover:text-white
@@ -414,6 +414,14 @@ body {
 }
 
 /************* STEPS ***********/
+
+.step-menu-item {
+  @apply py-3 text-sm font-medium border-b-2 cursor-pointer
+}
+.step-menu-item-is-active {
+  @apply py-3 text-sm font-medium border-b-2 cursor-pointer text-secondary-900 border-secondary-500
+}
+
 .experience-item {
   @apply relative flex flex-col items-center justify-center w-56 h-56 p-3 overflow-hidden text-center list-none transition bg-white rounded-full shadow-gray-20 hover:bg-secondary-900
 }

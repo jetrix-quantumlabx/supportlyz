@@ -375,6 +375,14 @@
     /**
      *************** STEPS ****************
      */
+    const currentUrl = window.location.href;
+    const linkSteps = document.querySelectorAll(".step-menu-item");
+
+    // Itera sobre cada enlace
+    linkSteps.forEach(function (link) {
+      if (link.href === currentUrl) link.classList.add("step-menu-item-is-active");
+    });
+
     const tabHandlers = document.getElementsByClassName("step3-tab");
     const tabContents = document.getElementsByClassName("step3-tab-content");
     const questions = document.querySelector(".questions");
@@ -428,7 +436,6 @@
     };
 
     changeMessage();
-
   }
 
   init();
