@@ -33,12 +33,10 @@ body {
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
   text-align: center;
   font-variant: normal;
   text-transform: none;
   line-height: 1em;
-  margin-left: .2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -92,6 +90,12 @@ body {
 .icon-briefcase:before { content: '\e82d'; } /* '' */
 .icon-sully:before { content: '\e82e'; } /* '' */
 .icon-show:before { content: '\e82f'; } /* '' */
+.icon-bulb:before { content: '\e830'; } /* '' */
+.icon-circles:before { content: '\e831'; } /* '' */
+.icon-code:before { content: '\e832'; } /* '' */
+.icon-copy:before { content: '\e833'; } /* '' */
+.icon-circuit:before { content: '\e834'; } /* '' */
+.icon-arrows:before { content: '\e835'; } /* '' */
 
 /************* Buttons ***********/
 
@@ -127,10 +131,10 @@ body {
   @apply px-6 py-3 text-base delay-100 duration-500 transition text-white border border-white rounded-full min-w-[200px] hover:bg-white hover:text-secondary-900 hover:shadow-secondary-40
 }
 .button-secondary {
-  @apply flex items-center delay-100 font-medium duration-500 justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-tertiary-900 bg-secondary-900 hover:shadow-secondary-40 transition
+  @apply flex items-center delay-100 duration-500 justify-center w-full gap-2 px-6 py-2 text-base text-white rounded-full cursor-pointer hover:bg-tertiary-900 bg-secondary-900 hover:shadow-secondary-40 transition
 }
 .button-gray {
-  @apply flex items-center delay-100 font-medium duration-500 justify-center w-full gap-2 px-6 py-3 text-base text-penitentiary-900 rounded-full cursor-pointer hover:bg-secondary-900 bg-penitentiary-100 hover:text-white hover:shadow-secondary-40 transition
+  @apply flex items-center delay-100 duration-500 justify-center w-full gap-2 px-6 py-2 text-base text-penitentiary-900 rounded-full cursor-pointer hover:bg-secondary-900 bg-penitentiary-100 hover:text-white hover:shadow-secondary-40 transition
 }
 
 .button-connect {
@@ -416,7 +420,7 @@ body {
 /************* STEPS ***********/
 
 .step-menu-item {
-  @apply py-3 text-sm font-medium border-b-2 cursor-pointer
+  @apply py-3 text-sm border-b-2 cursor-pointer
 }
 .step-menu-item-is-active {
   @apply py-3 text-sm font-medium border-b-2 cursor-pointer text-secondary-900 border-secondary-500
@@ -429,28 +433,38 @@ body {
   @apply absolute -bottom-[85px] left-[50px] w-32 h-32 rounded-full bg-tertiary-900 flex items-start justify-center p-3 translate-y-full group-hover:translate-y-0 transition
 }
 
-.questions {
+.step-questions {
   @apply relative
 }
-.questions-is-disabled {
+.step-questions-is-disabled {
   @apply relative blur-2xl
 }
 
-.step3-tab {
+.step-tab {
   @apply flex items-center justify-center w-3/6 gap-2 py-2 cursor-pointer text-penitentiary-900 border-b-2 border-transparent
 }
-.step3-tab-is-active {
+.step-tab-is-active {
   @apply flex items-center justify-center w-3/6 gap-2 py-2 cursor-pointer text-secondary-900 border-b-2 border-secondary-900
 }
-.step3-tab-content {
-  @apply relative p-6 bg-white rounded-xl shadow-gray-20 w-full
+.step-tab-content {
+  @apply relative p-6 bg-white rounded-xl shadow-gray-20 w-full min-w-[700px]
 }
 
-.step3-message-text {
+.step-message-text {
   @apply block w-3/5 mx-auto my-10 text-2xl text-center text-penitentiary-900
 }
-.step3-message-input {
+.step-message-input {
   @apply w-full h-24 outline-none
+}
+
+.integration-tab {
+  @apply flex items-center h-16 gap-4 p-4 rounded-lg cursor-pointer transition hover:bg-white hover:shadow-gray-20 min-w-[240px]
+}
+.integration-tab-is-active {
+  @apply flex items-center h-16 gap-4 p-4 rounded-lg cursor-pointer transition bg-white shadow-gray-20 min-w-[240px]
+}
+.integration-content {
+  @apply flex flex-col items-center justify-center w-full p-8 bg-white relative
 }
 
 /*********** UTILITIES ***********/

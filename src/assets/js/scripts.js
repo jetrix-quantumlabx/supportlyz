@@ -380,25 +380,27 @@
 
     // Itera sobre cada enlace
     linkSteps.forEach(function (link) {
-      if (link.href === currentUrl) link.classList.add("step-menu-item-is-active");
+      if (link.href === currentUrl)
+        link.classList.add("step-menu-item-is-active");
     });
 
-    const tabHandlers = document.getElementsByClassName("step3-tab");
-    const tabContents = document.getElementsByClassName("step3-tab-content");
-    const questions = document.querySelector(".questions");
+    // Tabs
+    const tabHandlers = document.getElementsByClassName("step-tab");
+    const tabContents = document.getElementsByClassName("step-tab-content");
+    const questions = document.querySelector(".step-questions");
 
     toggleClassWithEvent(
       "click",
       tabHandlers[1],
-      "questions-is-disabled",
-      "questions",
+      "step-questions-is-disabled",
+      "step-questions",
       questions
     );
     toggleClassWithEvent(
       "click",
       tabHandlers[0],
-      "questions",
-      "questions-is-disabled",
+      "step-questions",
+      "step-questions-is-disabled",
       questions
     );
 
@@ -408,11 +410,11 @@
       tabHandlers[i].addEventListener("click", function () {
         // Eliminar clase is-active de todos los tabs
         [...tabHandlers].forEach((tab) => {
-          tab.classList.remove("step3-tab-is-active");
+          tab.classList.remove("step-tab-is-active");
         });
 
         // Agregar clase is-active al tab clickeado
-        tabHandlers[i].classList.add("step3-tab-is-active");
+        tabHandlers[i].classList.add("step-tab-is-active");
 
         // Ocultar todos los contenidos
         for (let j = 0; j < tabContents.length; j++) {
@@ -424,8 +426,8 @@
       });
     });
 
-    const messageInput = document.querySelector(".step3-message-input");
-    const messageText = document.querySelector(".step3-message-text");
+    const messageInput = document.querySelector(".step-message-input");
+    const messageText = document.querySelector(".step-message-text");
 
     const changeMessage = () => {
       if (!messageInput) return;
@@ -436,6 +438,34 @@
     };
 
     changeMessage();
+
+    // Integration Tabs
+    const integrationTabHandlers = document.getElementsByClassName("integration-tab");
+    const integrationContents = document.getElementsByClassName(
+      "integration-content"
+    );
+
+    [...integrationTabHandlers].forEach((tab, i) => {
+      if (!integrationTabHandlers) return;
+
+      integrationTabHandlers[i].addEventListener("click", function () {
+        // Eliminar clase is-active de todos los tabs
+        [...integrationTabHandlers].forEach((tab) => {
+          tab.classList.remove("integration-tab-is-active");
+        });
+
+        // Agregar clase is-active al tab clickeado
+        integrationTabHandlers[i].classList.add("integration-tab-is-active");
+
+        // Ocultar todos los contenidos
+        for (let j = 0; j < integrationContents.length; j++) {
+          integrationContents[j].style.display = "none";
+        }
+
+        // Mostrar el contenido correspondiente al tab clickeado
+        integrationContents[i].style.display = "flex";
+      });
+    });
   }
 
   init();
