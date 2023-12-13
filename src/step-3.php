@@ -29,43 +29,89 @@
             </div>
             <p class="block w-4/6 mb-10 text-sm text-penitentiary-900">How would you like to engage your visitors when they enter your site for the very first time?</p>
 
-            <div class="relative">
-              <li class="flex items-center gap-5 p-4 mb-4 border rounded-lg border-secondary-900">
-                <span class="w-4 h-4 rounded-full bg-secondary-900"></span>
+            <div class="questions">
+              <li class="flex items-center gap-5 p-4 mb-4 transition border rounded-lg border-secondary-900 hover:bg-secondary-300">
+                <div class="relative flex items-center cursor-pointer">
+                  <input type="checkbox" class="radio peer" />
+                  <span class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <span class="block w-3 h-3 rounded-full bg-secondary-900"></span>
+                  </span>
+                </div>
                 <p class="text-penitentiary-900">Ask them if they’d like to get a closer look at your offer</p>
               </li>
-              <li class="flex items-center gap-5 p-4 mb-4 border rounded-lg border-secondary-900">
-                <span class="w-4 h-4 rounded-full bg-secondary-900"></span>
+              <li class="flex items-center gap-5 p-4 mb-4 transition border rounded-lg border-secondary-900 hover:bg-secondary-300">
+                <div class="relative flex items-center cursor-pointer">
+                  <input type="checkbox" class="radio peer" />
+                  <span class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <span class="block w-3 h-3 rounded-full bg-secondary-900"></span>
+                  </span>
+                </div>
                 <p class="text-penitentiary-900">Ask them if they’d like to order a phone call</p>
               </li>
-              <li class="flex items-center gap-5 p-4 mb-4 border rounded-lg border-secondary-900">
-                <span class="w-4 h-4 rounded-full bg-secondary-900"></span>
+              <li class="flex items-center gap-5 p-4 mb-4 transition border rounded-lg border-secondary-900 hover:bg-secondary-300">
+                <div class="relative flex items-center cursor-pointer">
+                  <input type="checkbox" class="radio peer" />
+                  <span class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                    <span class="block w-3 h-3 rounded-full bg-secondary-900"></span>
+                  </span>
+                </div>
                 <p class="text-penitentiary-900">Ask them if they’d like to get a closer look at your offer</p>
               </li>
-              <div class="flex items-center gap-3">
-                <span>
-                  <i class="text-2xl icon-bell text-secondary-900"></i>
-                </span>
-                <p class="text-penitentiary-900">You can change this later in the Chatbots menu.</p>
-              </div>
-
+            </div>
+            <div class="flex items-center gap-3">
+              <span>
+                <i class="text-2xl icon-bell text-secondary-900"></i>
+              </span>
+              <p class="text-penitentiary-900">You can change this later in the Chatbots menu.</p>
             </div>
           </div>
 
           <div class="relative">
             <div class="flex items-center w-full gap-5">
-              <li class="flex items-center justify-center w-3/6 gap-2 py-2 border-b text-secondary-900 border-secondary-900">
+              <li class="step3-tab">
                 <span>
                   <i class="icon-message"></i>
                 </span>
                 <p>Preview</p>
               </li>
-              <li class="flex items-center justify-center w-3/6 gap-2 py-2 text-penitentiary-900">
+              <li class="step3-tab">
                 <span>
                   <i class="icon-pen"></i>
                 </span>
                 <p>Customize this message</p>
               </li>
+            </div>
+            <div class="relative">
+              <div class="step3-tab-content">
+                <p class="step3-message-text">Hello! 🤭 Would you like to take a closer look at our offer?</p>
+                <div class="flex items-center gap-5">
+                  <button class="button-secondary">
+                    Yes, i want to know!
+                  </button>
+                  <button class="button-gray">
+                    I’m not interested
+                  </button>
+                </div>
+              </div>
+
+              <div class="step3-tab-content" style="display: none;">
+                <div class="flex items-center gap-3 mb-4 text-tertiary-900">
+                  <span>
+                    <i class="icon-pen"></i>
+                  </span>
+                  <p>Customize this message</p>
+                </div>
+                <textarea name="message" id=message" cols="20" rows="10" class="step3-message-input"></textarea>
+                <div class="flex">
+                  <button class="button-secondary">
+                    Save the Message
+                  </button>
+                </div>
+              </div>
+
+              <div class="absolute -right-12 bottom-10">
+                <?php include 'components/common/chatbot-handler.php'; ?>
+              </div>
             </div>
           </div>
         </div>

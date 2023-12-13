@@ -1,4 +1,3 @@
-<!-- Header -->
 <div class="flex items-center p-6 bg-geyser-100">
   <div class="flex items-center justify-between w-full">
     <div class="relative h-10 w-52">

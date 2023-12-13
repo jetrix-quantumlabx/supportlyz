@@ -1,4 +1,3 @@
-<!-- Footer -->
 <div class="fixed bottom-0 left-0 flex items-center justify-between w-full px-6 py-8">
   <p class="flex items-center gap-3 text-penitentiary-900">
     <img src="assets/images/logo-isotipe.svg" alt="isotipe" class="w-5 h-5">

@@ -278,9 +278,11 @@
         </div>
 
         <section>
-          <div class="fixed z-30 chatbot-box bottom-10 right-10">
-            <?php include 'components/common/chatbot.php'; ?>
+          <div class="fixed bottom-14 right-4">
             <?php include 'components/common/chatbot-handler.php'; ?>
+          </div>
+          <div class="fixed z-30 right-5 chatbot-box bottom-6">
+            <?php include 'components/common/chatbot.php'; ?>
             <div>
         </section>
         <?php

@@ -1,4 +1,3 @@
-<!-- Sidebar -->
 <div class="bg-geyser-100 w-28">
   <div class="relative sidebar-handler">
     <span class="sidebar-label">

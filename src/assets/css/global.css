@@ -120,7 +120,7 @@ body {
 }
 
 .button-white-small {
-  @apply flex transition font-medium delay-100 duration-500 items-center justify-center w-full gap-2 py-2 text-sm text-white rounded-full cursor-pointer hover:bg-secondary-900 bg-secondary-900 hover:shadow-secondary-40
+  @apply flex transition font-medium delay-100 duration-500 items-center justify-center w-full gap-2 py-2 text-sm text-penitentiary-900 rounded-full cursor-pointer hover:bg-secondary-900 bg-secondary-900 hover:shadow-secondary-40
 }
 
 .button-outline-white  {
@@ -128,6 +128,9 @@ body {
 }
 .button-secondary {
   @apply flex items-center delay-100 font-medium duration-500 justify-center w-full gap-2 px-6 py-3 text-base text-white rounded-full cursor-pointer hover:bg-tertiary-900 bg-secondary-900 hover:shadow-secondary-40 transition
+}
+.button-gray {
+  @apply flex items-center delay-100 font-medium duration-500 justify-center w-full gap-2 px-6 py-3 text-base text-penitentiary-900 rounded-full cursor-pointer hover:bg-secondary-900 bg-penitentiary-100 hover:text-white hover:shadow-secondary-40 transition
 }
 
 .button-connect {
@@ -256,15 +259,15 @@ body {
 }
 
 .chatbot-handler {
-  @apply fixed bottom-20 right-4 flex items-center justify-center w-20 h-20 text-center text-white transition delay-100 rounded-full cursor-pointer bg-secondary-900 hover:bg-white hover:text-secondary-900 shadow-secondary-40 hover:shadow-secondary-50
+  @apply flex items-center justify-center w-20 h-20 text-center text-white transition delay-100 rounded-full cursor-pointer bg-secondary-900 hover:bg-white hover:text-secondary-900 shadow-secondary-40 hover:shadow-secondary-50
 }
 
 .chatbot-send {
-  @apply flex items-center justify-center w-16 h-16 text-center text-white transition delay-100 rounded-full cursor-pointer bg-secondary-900 hover:bg-white hover:text-secondary-900 shadow-secondary-40 hover:shadow-secondary-50 absolute -right-9 -top-12
+  @apply flex items-center justify-center w-20 h-20 text-center text-white transition delay-100 rounded-full cursor-pointer bg-secondary-900 hover:bg-white hover:text-secondary-900 shadow-secondary-40 hover:shadow-secondary-50 absolute -right-9 -top-4
 }
 
 .chatbot-input {
-  @apply bg-geyser-200 rounded-full w-[350px] text-sm text-penitentiary-600 h-14 px-5 outline-none transition hover:bg-secondary-200
+  @apply bg-geyser-200 rounded-full w-[300px] text-sm text-penitentiary-600 h-14 px-5 outline-none transition hover:bg-secondary-200
 }
 .chatbot-input-label {
   @apply absolute text-base transition left-5 top-4 text-penitentiary-600 opacity-0 invisible
@@ -348,6 +351,11 @@ body {
   @apply relative h-5 w-5 cursor-pointer appearance-none rounded-sm border-2 border-secondary-600 transition-all before:absolute before:content-[''] before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-gray-500 before:opacity-0 before:transition-opacity checked:border-secondary-900 checked:bg-secondary-900 checked:before:bg-secondary-900 hover:before:opacity-10
 }
 
+/* Radio */
+.radio {
+  @apply relative h-5 w-5 cursor-pointer appearance-none rounded-full border-2 border-secondary-600 transition-all before:absolute before:content-[''] before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-gray-500 before:opacity-0 before:transition-opacity checked:border-secondary-900 checked:bg-white checked:before:bg-secondary-900 hover:before:opacity-10
+}
+
 /* Input */
 .input-container {
   @apply relative h-[50px] transition overflow-hidden border rounded-full shadow-gray-20
@@ -411,6 +419,30 @@ body {
 }
 .experience-item-check {
   @apply absolute -bottom-[85px] left-[50px] w-32 h-32 rounded-full bg-tertiary-900 flex items-start justify-center p-3 translate-y-full group-hover:translate-y-0 transition
+}
+
+.questions {
+  @apply relative
+}
+.questions-is-disabled {
+  @apply relative blur-2xl
+}
+
+.step3-tab {
+  @apply flex items-center justify-center w-3/6 gap-2 py-2 cursor-pointer text-penitentiary-900 border-b-2 border-transparent
+}
+.step3-tab-is-active {
+  @apply flex items-center justify-center w-3/6 gap-2 py-2 cursor-pointer text-secondary-900 border-b-2 border-secondary-900
+}
+.step3-tab-content {
+  @apply relative p-6 bg-white rounded-xl shadow-gray-20 w-full
+}
+
+.step3-message-text {
+  @apply block w-3/5 mx-auto my-10 text-2xl text-center text-penitentiary-900
+}
+.step3-message-input {
+  @apply w-full h-24 outline-none
 }
 
 /*********** UTILITIES ***********/

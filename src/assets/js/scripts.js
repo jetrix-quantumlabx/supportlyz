@@ -352,11 +352,12 @@
     const changeSwitchLabel = () => {
       if (!switchHandler) return;
       switchHandler.addEventListener("click", function () {
-        switchText.textContent = switchText.textContent.trim() === "OFF" ? "ON" : "OFF";
+        switchText.textContent =
+          switchText.textContent.trim() === "OFF" ? "ON" : "OFF";
       });
-    }
+    };
 
-    changeSwitchLabel()
+    changeSwitchLabel();
 
     const selectHandlers = document.getElementsByClassName("select-handler");
     const selectDropdowns = document.getElementsByClassName("select-dropdown");
@@ -371,6 +372,62 @@
       );
     });
 
+    /**
+     *************** STEPS ****************
+     */
+    const tabHandlers = document.getElementsByClassName("step3-tab");
+    const tabContents = document.getElementsByClassName("step3-tab-content");
+    const questions = document.querySelector(".questions");
+
+    toggleClassWithEvent(
+      "click",
+      tabHandlers[1],
+      "questions-is-disabled",
+      "questions",
+      questions
+    );
+    toggleClassWithEvent(
+      "click",
+      tabHandlers[0],
+      "questions",
+      "questions-is-disabled",
+      questions
+    );
+
+    [...tabHandlers].forEach((tab, i) => {
+      if (!tabHandlers) return;
+
+      tabHandlers[i].addEventListener("click", function () {
+        // Eliminar clase is-active de todos los tabs
+        [...tabHandlers].forEach((tab) => {
+          tab.classList.remove("step3-tab-is-active");
+        });
+
+        // Agregar clase is-active al tab clickeado
+        tabHandlers[i].classList.add("step3-tab-is-active");
+
+        // Ocultar todos los contenidos
+        for (let j = 0; j < tabContents.length; j++) {
+          tabContents[j].style.display = "none";
+        }
+
+        // Mostrar el contenido correspondiente al tab clickeado
+        tabContents[i].style.display = "block";
+      });
+    });
+
+    const messageInput = document.querySelector(".step3-message-input");
+    const messageText = document.querySelector(".step3-message-text");
+
+    const changeMessage = () => {
+      if (!messageInput) return;
+      messageInput.addEventListener("input", function () {
+        // Cambia el texto del elemento messageElement al valor del textarea
+        messageText.textContent = this.value;
+      });
+    };
+
+    changeMessage();
 
   }
 

@@ -1,4 +1,4 @@
-<div class="transition bg-white rounded-full text-penitentiary-900 hover:shadow-secondary-40">
+<div class="relative transition bg-white rounded-full text-penitentiary-900 hover:shadow-secondary-40">
   <div class="language-handler">
     <img src="assets/images/english.png" alt="shape" class="w-5 h-5 rounded-full">
     <p class="text-sm">English</p>

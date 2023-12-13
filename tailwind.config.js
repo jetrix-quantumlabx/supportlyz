@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**.php"],
+  content: ["./src/**/*.php"],
   theme: {
     extend: {
       animation: {
@@ -63,7 +63,7 @@ module.exports = {
           900: "#10453F",
         },
         penitentiary: {
-          100: "#E9EFF4",
+          100: "#C2CACE",
           200: "#ACB6BA",
           300: "#EDF2F5",
           400: "#96A2A6",
