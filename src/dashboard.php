@@ -13,7 +13,7 @@
 
     <?php include 'components/dashboard/header.php'; ?>
 
-    <div class="flex">
+    <div class="layout">
       <!-- Sidebar -->
       <?php include 'components/dashboard/sidebar.php'; ?>
 
@@ -285,9 +285,7 @@
             <?php include 'components/common/chatbot.php'; ?>
             <div>
         </section>
-        <?php
-        // include 'components/dashboard/footer.php';
-        ?>
+        <?php include 'components/dashboard/footer.php'; ?>
       </div>
     </div>
   </main>

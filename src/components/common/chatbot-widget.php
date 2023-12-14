@@ -54,28 +54,31 @@
       </div>
 
       <!-- Close Chatbot Box -->
-      <button class="button-icon chatbot-box-close">
+      <button class="button-icon">
         <span>
           <i class="icon-x"></i>
         </span>
       </button>
     </div>
   </div>
-  <div class="py-6">
-    <h3 class="mb-3 text-3xl font-bold text-center text-white">
-      Hello world! 😊
-    </h3>
-    <p class="text-sm text-center text-white">
-      Welcome to Supportlyz! We’re ready to help you! 🚀
-    </p>
+  <div class="flex items-center gap-2 px-4">
+    <div class="relative w-16 h-16 rounded-full">
+      <img src="assets/images/default-user.png" alt="default">
+      <span class="absolute top-0 w-3 h-3 rounded-full right-[10px] bg-secondary-900"></span>
+    </div>
+    <div class="py-6">
+      <h3 class="mb-3 text-3xl font-bold text-center text-white">
+        Let’s chat! 🥳
+      </h3>
+      <p class="text-sm text-center text-white">
+        Chat with Nike Shopify Store
+      </p>
+    </div>
   </div>
 
-  <div class="flex items-center justify-center gap-3 py-4 bg-tertiary-900 rounded-t-3xl">
-    <div class="relative">
-      <img src="assets/images/boy.png" alt="user" />
-      <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-secondary-900"></span>
-    </div>
-    <p class="text-sm text-white">Our Assistants are Online</p>
+  <div class="flex items-center justify-start gap-3 p-4 bg-tertiary-900 rounded-t-3xl">
+    <span class="w-3 h-3 rounded-full bg-secondary-900"></span>
+    <p class="text-sm text-white">Answer Time: <span class="font-semibold">Immediately!</span> 😎 </p>
   </div>
 </div>
 

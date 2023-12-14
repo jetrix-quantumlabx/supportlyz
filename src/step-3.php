@@ -120,8 +120,8 @@
         <!-- Buttons -->
         <div class="flex items-center w-full gap-5">
           <div class="flex justify-end w-3/6">
-            <a href="step-1.php">
-              <button class="flex items-center justify-between w-64 px-4 text-base transition duration-500 bg-[#bfd9e9] border-0 rounded-full cursor-pointer h-11 text-secondary-900 shadow-gray-20">
+            <a href="step-2.php">
+              <button class="flex items-center justify-between w-64 px-4 text-base transition duration-500 bg-[#bfd9e9] border-0 rounded-full cursor-pointer h-[44px] text-secondary-900 shadow-gray-20">
                 <i class="text-2xl rotate-180 icon-arrow"></i>
                 <span>Go Back</span>
               </button>
@@ -129,16 +129,24 @@
           </div>
           <div class="flex justify-start w-3/6">
             <a href="step-4.php">
-              <button class="flex items-center justify-between w-64 px-4 text-base transition duration-500 bg-white border-0 rounded-full cursor-pointer hover:bg-secondary-900 hover:text-white h-11 text-secondary-900 shadow-gray-20">
+              <button class="flex items-center justify-between w-64 px-4 text-base transition duration-500 bg-white border-0 rounded-full cursor-pointer hover:bg-secondary-900 hover:text-white h-[44px] text-secondary-900 shadow-gray-20">
                 <span>Continue</span>
                 <i class="text-2xl icon-arrow"></i>
               </button>
             </a>
           </div>
         </div>
-
       </div>
 
+      <!-- Internal Chabot -->
+      <section>
+        <div class="fixed bottom-14 right-4">
+          <?php include 'components/common/chatbot-handler.php'; ?>
+        </div>
+        <div class="fixed z-30 right-5 chatbot-box bottom-6">
+          <?php include 'components/common/chatbot.php'; ?>
+          <div>
+      </section>
 
       <!-- Footer -->
       <?php include 'components/steps/footer.php'; ?>

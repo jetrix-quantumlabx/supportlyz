@@ -19,7 +19,7 @@
 
         <div class="flex justify-end w-3/6">
           <div class="w-[490px]">
-            <?php include 'components/common/chatbot.php'; ?>
+            <?php include 'components/common/chatbot-widget.php'; ?>
           </div>
         </div>
 
@@ -92,7 +92,7 @@
 
             </div>
             <a href="step-2.php">
-              <button class="flex items-center justify-between w-64 px-4 text-base transition duration-500 bg-white border-0 rounded-full cursor-pointer hover:bg-secondary-900 hover:text-white h-11 text-secondary-900 shadow-gray-20">
+              <button class="flex items-center h-[44px] justify-between w-64 px-4 text-base transition duration-500 bg-white border-0 rounded-full cursor-pointer hover:bg-secondary-900 hover:text-white text-secondary-900 shadow-gray-20">
                 <span>Continue</span>
                 <i class="text-2xl icon-arrow"></i>
               </button>
@@ -101,6 +101,15 @@
         </div>
       </div>
 
+      <!-- Internal Chabot -->
+      <section>
+        <div class="fixed bottom-14 right-4">
+          <?php include 'components/common/chatbot-handler.php'; ?>
+        </div>
+        <div class="fixed z-30 right-5 chatbot-box bottom-6">
+          <?php include 'components/common/chatbot.php'; ?>
+          <div>
+      </section>
       <?php include 'components/steps/footer.php'; ?>
     </div>
   </main>

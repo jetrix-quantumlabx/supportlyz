@@ -96,6 +96,22 @@ body {
 .icon-copy:before { content: '\e833'; } /* '' */
 .icon-circuit:before { content: '\e834'; } /* '' */
 .icon-arrows:before { content: '\e835'; } /* '' */
+.icon-ticket:before { content: '\e836'; } /* '' */
+
+/************* Layout ***********/
+
+.layout-with-navigation {
+  display: grid;
+  grid-template-columns: 110px 320px 1fr;
+  align-items: center;
+  min-height: 100vh;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  min-height: 100vh;
+}
 
 /************* Buttons ***********/
 
@@ -131,7 +147,7 @@ body {
   @apply px-6 py-3 text-base delay-100 duration-500 transition text-white border border-white rounded-full min-w-[200px] hover:bg-white hover:text-secondary-900 hover:shadow-secondary-40
 }
 .button-secondary {
-  @apply flex items-center delay-100 duration-500 justify-center w-full gap-2 px-6 py-2 text-base text-white rounded-full cursor-pointer hover:bg-tertiary-900 bg-secondary-900 hover:shadow-secondary-40 transition
+  @apply h-[44px] flex items-center delay-100 duration-500 justify-center w-full gap-2 px-6 py-2 text-base text-white rounded-full cursor-pointer hover:bg-tertiary-900 bg-secondary-900 hover:shadow-secondary-40 transition
 }
 .button-gray {
   @apply flex items-center delay-100 duration-500 justify-center w-full gap-2 px-6 py-2 text-base text-penitentiary-900 rounded-full cursor-pointer hover:bg-secondary-900 bg-penitentiary-100 hover:text-white hover:shadow-secondary-40 transition
@@ -297,6 +313,23 @@ body {
   @apply absolute z-20 flex items-center justify-center h-5 p-3 text-xs text-white capitalize rounded-full opacity-100 visible -top-2 left-10 bg-tertiary-900 whitespace-nowrap transition delay-1000
 }
 
+/************* Navigation ***********/
+.navigation-handler {
+  @apply flex items-center bg-white rounded-full justify-between cursor-pointer h-[44px] px-5
+}
+.navigation-handler-is-active {
+  @apply flex items-center text-white bg-secondary-900 rounded-full justify-between cursor-pointer h-[44px] px-5
+}
+.navigation-drowdown {
+  @apply px-4 py-0 mt-2 bg-white rounded-2xl max-h-0 transition-all overflow-hidden
+}
+.navigation-drowdown-is-active {
+  @apply px-4 py-4 mt-2 bg-white rounded-2xl max-h-full transition-all
+}
+.navigation-drowdown-item {
+  @apply flex items-center hover:text-white rounded-full text-penitentiary-900 h-[40px] px-5 text-base mb-2 last:mb-0 cursor-pointer hover:bg-secondary-900
+}
+
 /************* Statistics ***********/
 .statistics {
   @apply bg-white bg-opacity-50 rounded-3xl h-[110px] w-4/5 cursor-pointer transition relative overflow-hidden before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:z-10 before:transition before:bg-secondary-900 before:duration-500 before:opacity-0 before:invisible hover:before:visible hover:before:opacity-100
@@ -420,7 +453,7 @@ body {
 /************* STEPS ***********/
 
 .step-menu-item {
-  @apply py-3 text-sm border-b-2 cursor-pointer
+  @apply py-3 text-sm border-b-2 cursor-pointer border-transparent
 }
 .step-menu-item-is-active {
   @apply py-3 text-sm font-medium border-b-2 cursor-pointer text-secondary-900 border-secondary-500

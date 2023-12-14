@@ -27,6 +27,9 @@
       );
     };
 
+    // Current URL
+    const currentUrl = window.location.href;
+
     /**
      *************** ACCOUNT DROPDOWN ****************
      */
@@ -209,49 +212,50 @@
       chatbotIcon
     );
 
-    const chatbotEmojisBox = document.querySelector(".chatbot-emojis-box");
-    const chatbotEmojisHandler = document.querySelector(
+    const chatbotEmojisHandlers = document.querySelectorAll(
       ".chatbot-emojis-handler"
     );
+    const chatbotEmojisBoxes = document.querySelectorAll(".chatbot-emojis-box");
 
-    // Muestra y oculta el box de emojis
-    toggleClassWithEvent(
-      "click",
-      chatbotEmojisHandler,
-      "chatbot-emojis-box",
-      "chatbot-emojis-box-is-active",
-      chatbotEmojisBox
-    );
+    [...chatbotEmojisHandlers].forEach((chatbotEmojisHandler, i) => {
+      toggleClassWithEvent(
+        "click",
+        chatbotEmojisHandler,
+        "chatbot-emojis-box",
+        "chatbot-emojis-box-is-active",
+        chatbotEmojisBoxes[i]
+      );
+    });
 
-    const chatbotNotificationHandler = document.querySelector(
-      ".chatbot-notification-handler"
-    );
-    const chatbotNotificationBox = document.querySelector(
-      ".chatbot-notification-box"
-    );
+    const chatbotNotificationHandlers = document.querySelectorAll(".chatbot-notification-handler");
+    const chatbotNotificationBoxes = document.querySelectorAll(".chatbot-notification-box");
 
-    // Muestra y oculta el box de notifications
-    toggleClassWithEvent(
-      "click",
-      chatbotNotificationHandler,
-      "chatbot-notification-box",
-      "chatbot-notification-box-is-active",
-      chatbotNotificationBox
-    );
+    [...chatbotNotificationHandlers].forEach((navigationHandler, i) => {
+      toggleClassWithEvent(
+        "click",
+        navigationHandler,
+        "chatbot-notification-box-is-active",
+        "chatbot-notification-box",
+        chatbotNotificationBoxes[i]
+      );
+    });
 
-    const chatbotRatingHandler = document.querySelector(
+    const chatbotRatingHandlers = document.querySelectorAll(
       ".chatbot-rating-handler"
     );
-    const chatbotRatingBox = document.querySelector(".chatbot-rating-box");
-
-    // Muestra y oculta el box de rating
-    toggleClassWithEvent(
-      "click",
-      chatbotRatingHandler,
-      "chatbot-rating-box",
-      "chatbot-rating-box-is-active",
-      chatbotRatingBox
+    const chatbotRatingBoxes = document.querySelectorAll(
+      ".chatbot-rating-box"
     );
+
+    [...chatbotRatingHandlers].forEach((navigationHandler, i) => {
+      toggleClassWithEvent(
+        "click",
+        navigationHandler,
+        "chatbot-rating-box-is-active",
+        "chatbot-rating-box",
+        chatbotRatingBoxes[i]
+      );
+    });
 
     const chatbotInput = document.querySelector(".chatbot-input");
     const chatbotInputLabel = document.querySelector(".chatbot-input-label");
@@ -277,8 +281,8 @@
     /**
      *************** SIDEBAR ****************
      */
-    const sidebarHandlers = document.getElementsByClassName("sidebar-handler");
-    const sidebarLabels = document.getElementsByClassName("sidebar-label");
+    const sidebarHandlers = document.querySelectorAll(".sidebar-handler");
+    const sidebarLabels = document.querySelectorAll(".sidebar-label");
 
     [...sidebarHandlers].forEach((sidebarHandler, i) => {
       toggleClassWithEvent(
@@ -296,6 +300,38 @@
         sidebarLabels[i]
       );
     });
+
+    const sidebarItems = document.querySelectorAll(".sidebar-item");
+
+    // Itera sobre cada enlace
+    sidebarItems.forEach(function (link) {
+      if (link.href === currentUrl)
+        link.classList.add("sidebar-item-is-active");
+    });
+
+    /**
+     *************** NAVIGATION ****************
+     */
+    const navigationHandlers = document.querySelectorAll(".navigation-handler");
+    const navigationDropdowns = document.querySelectorAll(".navigation-drowdown");
+
+    [...navigationHandlers].forEach((navigationHandler, i) => {
+      toggleClassWithEvent(
+        "click",
+        navigationHandler,
+        "navigation-drowdown-is-active",
+        "navigation-drowdown",
+        navigationDropdowns[i]
+      );
+      toggleClassWithEvent(
+        "click",
+        navigationHandler,
+        "navigation-handler-is-active",
+        "navigation-handler",
+        navigationHandler
+      );
+    });
+
 
     /**
      *************** FORMULARIOS ****************
@@ -375,7 +411,6 @@
     /**
      *************** STEPS ****************
      */
-    const currentUrl = window.location.href;
     const linkSteps = document.querySelectorAll(".step-menu-item");
 
     // Itera sobre cada enlace
@@ -440,7 +475,8 @@
     changeMessage();
 
     // Integration Tabs
-    const integrationTabHandlers = document.getElementsByClassName("integration-tab");
+    const integrationTabHandlers =
+      document.getElementsByClassName("integration-tab");
     const integrationContents = document.getElementsByClassName(
       "integration-content"
     );
